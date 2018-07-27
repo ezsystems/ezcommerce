@@ -1,13 +1,13 @@
 {
-    "name": "ezsystems/ezplatform-ee",
-    "description": "eZ Platform Enterprise Edition distribution",
-    "homepage": "https://github.com/ezsystems/ezplatform-ee",
+    "name": "ezsystems/ezcommerce",
+    "description": "eZ Commerce distribution",
+    "homepage": "https://github.com/ezsystems/ezcommerce",
     "license": "proprietary",
     "type": "project",
     "authors": [
         {
             "name": "eZ dev-team & eZ Community",
-            "homepage": "https://github.com/ezsystems/ezplatform-ee/contributors"
+            "homepage": "https://github.com/ezsystems/ezcommerce/contributors"
         }
     ],
     "repositories": [
