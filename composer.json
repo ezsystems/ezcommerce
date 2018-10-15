@@ -11,7 +11,8 @@
         }
     ],
     "repositories": [
-        { "type": "composer", "url": "https://updates.ez.no/ttl" }
+        { "type": "composer", "url": "https://updates.ez.no/ttl" },
+        { "type": "composer", "url": "https://updates.ez.no/ttl_com" }
     ],
     "replace": {
         "ezsystems/ezstudio": "*",
@@ -62,7 +63,11 @@
         "white-october/pagerfanta-bundle": "^1.2",
         "roave/security-advisories": "dev-master",
         "leafo/scssphp": "^0.7.6",
-        "symfony/thanks": "^1.0.7"
+        "symfony/thanks": "^1.0.7",
+        "silversolutions/silver.e-shop": "^1.4",
+        "silversolutions/silver.content": "^1.4",
+        "silversolutions/silver.orderhistory": "^1.4",
+        "silversolutions/silver.shoppriceengine": "^1.4"
     },
     "require-dev": {
         "behat/behat": "^3.4.3",
