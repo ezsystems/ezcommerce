@@ -1,0 +1,23 @@
+parameters:
+    siso_core.default.ses_swiftmailer:
+        mailSender: shop@silversolutions.de
+        mailReceiver: shop@silversolutions.de
+        lostOrderEmailReceiver: shop@silversolutions.de
+        contactMailReceiver: shop@silversolutions.de
+        cancellationMailReceiver: shop@silversolutions.de
+        shopOwnerMailReceiver: shop@silversolutions.de
+    ses_eshop.forms.business.default_contact_recipient: shop@silversolutions.de
+    ses_eshop.order.sales_contact: shop@silversolutions.de
+    ses_eshop.lostorder_email: shop@silversolutions.de
+    siso_paypal_payment.receiver_email: shop@silver.de
+    silver_tools.default.translationFolderId: 112
+    siso_core.default.user_group_location: 106
+    siso_core.default.user_group_location.business: 106
+    siso_core.default.user_group_location.private: 106
+    siso_core.default.product_catalog_content_type_id: 46
+
+    ezcommerce.installer.migration_files_path: %kernel.project_dir%/migrations/demo
+
+    # if onesky is used - advanced version only
+    one_sky_api_key: my-one-sky-key
+    one_sky_secret: my-onesky-password
