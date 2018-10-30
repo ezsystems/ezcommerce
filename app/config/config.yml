@@ -23,7 +23,7 @@ doctrine:
                 dbname: '%database_name%'
                 user: '%database_user%'
                 password: '%database_password%'
-                charset: UTF8
+                charset: utf8mb4
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
@@ -137,13 +137,19 @@ jms_translation:
             dirs:
                 - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src'
             output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src/bundle/Resources/translations/'
+            excluded_dirs: [Behat, Tests, node_modules]
+            output_format: "xliff"
+        form_builder:
+            dirs:
+                - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-form-builder/src'
+            output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-form-builder/src/bundle/Resources/translations/'
             excluded_dirs: [Behat, Tests]
             output_format: "xliff"
         admin_modules:
             dirs:
                 - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui-modules/src'
             output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui-modules/Resources/translations/'
-            excluded_dirs: [Behat, Tests]
+            excluded_dirs: [Behat, Tests, node_modules]
             output_format: "xliff"
         page_builder:
             dirs:
@@ -151,3 +157,6 @@ jms_translation:
             output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-page-builder/src/bundle/Resources/translations/'
             excluded_dirs: [Behat, Tests]
             output_format: "xlf"
+
+gregwar_captcha:
+    as_url: true

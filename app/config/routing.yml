@@ -30,6 +30,11 @@ ezplatform.ee.page_builder:
     defaults:
         siteaccess_group_whitelist: '%admin_group_name%'
 
+ezplatform.ee.form_builder:
+    resource: '@EzPlatformFormBuilderBundle/Resources/config/routing.yml'
+    defaults:
+        siteaccess_group_whitelist: '%admin_group_name%'
+
 _ezplatformRepositoryFormsRoutes:
     resource: '@EzSystemsRepositoryFormsBundle/Resources/config/routing.yml'
 
@@ -48,6 +53,9 @@ ezplatform.ee.flex_workflow:
 
 fos.js_routing:
     resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
+
+gregwar_captcha_routing:
+    resource: "@GregwarCaptchaBundle/Resources/config/routing/routing.yml"
 
 # Custom redirection from /ez to /admin, feel free to adjust to your needs or remove if you don't need it
 platform1_admin_route:
