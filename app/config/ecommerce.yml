@@ -1,0 +1,271 @@
+imports: 
+    - { resource: '@SilversolutionsEshopBundle/Resources/config/config_data_provider_ez.yml' }
+    - { resource: '@SilversolutionsEshopBundle/Resources/config/ez_commerce.yml' }
+
+jms_payment_core:
+    encryption:
+        provider: defuse_php_encryption
+        secret: '%env(JMS_PAYMENT_SECRET)%'
+        enabled: true
+stash:
+    caches:
+        default:
+            drivers:
+                - FileSystem
+            inMemory: true
+            registerDoctrineAdapter: false
+            FileSystem:
+                keyHashFunction: crc32
+
+parameters:
+
+    siso_search.default.simple_facet_definitions:
+        download:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_is_download_value_b'
+
+        price_range:
+            #possible values: single|multi_and|multi_or
+            filter_type: 'single'
+            #possible values: alpha|numeric|manual|range
+            sort_type: 'range'
+            #sort_type_order: 'XS|S|M|L|XL|XXL'
+            index_field: 'ext_ses_price_range_ms'
+            # ONLY VALID FOR THIS FACET
+            index_range_boundries: 0|10|20|50|100
+        manufacturer:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_manufacturer_value_ms'
+        style:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_style_s'
+
+        variant_color:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_variant_farbe_ms'
+        variant_size:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ses_variant_groesse_ms'
+        category:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'location_parent_id_mid'
+            # ONLY VALID FOR THIS FACET
+            location_id_values: true
+        size:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_size_s'
+        availability:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_stock_numeric_value_s'
+        discontinued:
+            filter_type: 'single'
+            sort_type: 'alpha'
+            index_field: 'ses_product_ses_discontinued_value_s'
+
+        brand:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_brand_s'
+
+        color:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_color_s'
+
+        temperature:
+            filter_type: 'multi_or'
+            sort_type: 'alpha'
+            index_field: 'ext_ses_spec_temperature_s'
+
+
+    #which facets will be used per group
+    siso_search.default.used_facets:
+        product_list:
+            common: ['download','brand','color','manufacturer', 'category', 'price_range']
+            specifications: ['style', 'size',  'temperature']
+            variants: ['variant_color', 'variant_size']
+        product:
+            common: ['download','brand','color','manufacturer', 'category', 'price_range']
+            specifications: ['style', 'size',  'temperature']
+            variants: ['variant_color', 'variant_size']
+
+
+
+
+
+    siso_core.de.standard_price_factory.fallback_currency: EUR
+    siso_core.en.standard_price_factory.fallback_currency: USD
+    siso_core.default.automatic_currency_conversion: true
+    siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
+    siso_price.default.price_export.product_type_filter: [ses_product]
+    siso_core.default.breadcrumb_content_label_fields: ['name', 'title']
+
+    siso_seo.default.is_seo_bundle_enabled: false
+    siso_core.default.navigation.content:
+        types: ["st_module", "folder", "article", "landing_page", "ses_productcatalog", "folder_news", "folder_events", "blog", "folder_contacts"]
+        sections: [1, 2, 9]
+        enable_priority_zero: false
+        #additional field keys for translating navigation node label
+        label_fields: ['name', 'title']
+        additional_fields: ['intro', 'media', 'alternative_title', 'alternative_intro', 'alternative_image']
+    silver_eshop.default.path_prefix_seo: ''
+    siso_search.default.groups.search:
+        product:
+            types:
+                - ses_product
+                # activate if you want to find product types as well
+                #- ses_product_type
+            path: '/1/2/'
+            section:
+                - 1
+            visibility: true
+            # activate if you want to enable usage of the flag: displayInSearch
+            # if false, the flag will be ignored in the search even if set in eZ
+            #use_display_in_search_flag: true
+        content:
+            types:
+                - st_module
+                - folder
+                - article
+                - landing_page
+                - blog_post
+                - event
+                # add ez classes like news or folder_news, folder_events, folder_contacts
+
+            path: '/1/2/'
+            section:
+                - 1
+            visibility: true
+            # this parameter only make sence if there are some products/product types in the tab, see above
+            #use_display_in_search_flag: false
+        files:
+            types:
+                - file
+
+            path: '/1/43/'
+            section:
+                - 3
+            visibility: true
+            # this parameter only make sence if there are some products/product types in the tab, see above
+            #use_display_in_search_flag: false
+
+    siso_search.default.autosuggest_module_definitions:
+        product_autosuggest:
+            search_limit: 5
+            images_field: main_image_url_s
+            add_to_basket: true #add to cart
+            price_field: ses_product_ses_unit_price_f
+            search_fields:
+                - ses_product_ses_sku_value_s
+                - ses_product_ses_name_value_s
+            result_fields:
+                - ses_product_ses_sku_value_s
+                - ses_product_ses_name_value_s
+            result_fields_separator: ' - '
+            text_limit: 35
+            search_service_id: siso_search.autosuggest_service.product
+            redirect_generator_id: siso_search.autosuggest_redirect_generator.product
+        category_autosuggest:
+            search_limit: 5
+            images: true
+            search_fields:
+                - ses_category_ses_name_value_s
+            result_fields:
+                - ses_category_ses_name_value_s
+            result_fields_separator: ' - '
+            text_limit: 60
+            search_service_id: siso_search.autosuggest_service.category
+            redirect_generator_id: siso_search.autosuggest_redirect_generator.category
+        content_autosuggest:
+            search_limit: 5
+            images: true
+            section:
+                - 1
+            search_fields:
+                - article_title_value_s
+                - article_intro_value_s
+                - article_body_value_s
+                - blog_post_title_value_s
+                - blog_post_intro_value_s
+                - news_title_value_s
+                - news_intro_value_s
+                - event_title_value_s
+                - event_intro_value_s
+            result_fields:
+                - article_title_value_s
+                - article_intro_value_s
+                - article_body_value_s
+                - news_title_value_s
+                - news_intro_value_s
+                - event_title_value_s
+                - event_intro_value_s
+            result_fields_separator: ' - '
+            text_limit: 60
+            search_service_id: siso_search.autosuggest_service.content
+            redirect_generator_id: ~
+        download_autosuggest:
+            search_limit: 5
+            images: true
+            search_fields:
+                - file_name_value_s
+                - file_description_value_s
+            result_fields:
+                - file_name_value_s
+                - file_description_value_s
+            mime_types:
+                - application/pdf
+            result_fields_separator: ' - '
+            text_limit: 60
+            search_service_id: siso_search.autosuggest_service.download
+            redirect_generator_id: siso_search.autosuggest_redirect_generator.download
+
+
+    siso_price.default.price_service_chain.product_list:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.product_detail:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.slider_product_list:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.basket:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.basket_variant:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.stored_basket:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.wish_list:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.quick_order:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.quick_order_line_preview:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.comparison:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.search_list:
+        - siso_price.price_provider.shop
+    siso_price.default.price_service_chain.bestseller_list:
+        - siso_price.price_provider.shop
+
+apache_tika:
+    path: '%apache_tika_path%'
+
+nelmio_solarium:
+    endpoints:
+        default:
+            host: '%siso_search.solr.host%'
+            port: '%siso_search.solr.port%'
+            path: '%siso_search.solr.path%'
+            core: '%siso_search.solr.core%'
+            timeout: 30
+
+    clients:
+        default:
+            endpoints:
+                - default

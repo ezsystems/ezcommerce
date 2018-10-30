@@ -46,6 +46,7 @@ ezplatform.ee.date_based_publisher:
 ezplatform.ee.flex_workflow:
     resource: '@FlexWorkflowBundle/Resources/config/routing.yml'
 
+
 fos.js_routing:
     resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
 
@@ -56,3 +57,47 @@ platform1_admin_route:
     defaults:
         path: /admin
         permanent: true
+
+
+# This file is auto-generated during the composer install
+silversolutions_eshop:
+    resource: "@SilversolutionsEshopBundle/Resources/config/ses_routing.yml"
+    prefix: /
+silversolutions_datatypes:
+    resource: '@SilversolutionsDatatypesBundle/Resources/config/routing.yml'
+    prefix: /
+silversolutions_tools:
+    resource: '@SilversolutionsToolsBundle/Resources/config/routing.yml'
+    prefix: /
+silversolutions_translation:
+    resource: '@SilversolutionsTranslationBundle/Resources/config/routing.yml'
+    prefix: /
+
+siso_checkout:
+    resource: '@SisoCheckoutBundle/Resources/config/routing.yml'
+    prefix: /
+siso_comparison:
+    resource: '@SisoComparisonBundle/Resources/config/routing.yml'
+    prefix: /
+siso_quick_order:
+    resource: '@SisoQuickOrderBundle/Resources/config/routing.yml'
+    prefix: /
+siso_search:
+    resource: '@SisoSearchBundle/Resources/config/routing.yml'
+    prefix: /
+siso_tools:
+    resource: '@SisoToolsBundle/Resources/config/routing.yml'
+    prefix: /
+#siso_voucher:
+#    resource: "@SisoVoucherBundle/Resources/config/routing.yml"
+#    prefix: /
+siso_shop_price_engine:
+    resource: "@ShopPriceEnginePluginBundle/Resources/config/routing.yml"
+    prefix: /
+#_siso_payment:
+    #resource: '@SisoPaymentBundle/Resources/config/routing.yml'
+#_siso_paypal_payment:
+    #resource: '@SisoPaypalPaymentBundle/Resources/config/routing.yml'
+siso_orderhistory:
+    resource: '@SisoOrderHistoryBundle/Resources/config/routing.yml'
+    prefix: /
