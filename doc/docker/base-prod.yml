@@ -6,9 +6,12 @@ services:
     build:
       context: ../../
       dockerfile: ${APP_DOCKER_FILE}
+      args:
+       - PHP_IMAGE
     depends_on:
      - db
     environment:
+     - COMPOSER_MEMORY_LIMIT
      - SYMFONY_ENV=${SYMFONY_ENV-prod}
      - SYMFONY_DEBUG
      - SYMFONY_HTTP_CACHE
@@ -30,6 +33,8 @@ services:
     build:
       context: ../../
       dockerfile: doc/docker/Dockerfile-nginx
+      args:
+       - PHP_IMAGE
     depends_on:
      - app
     ports:
