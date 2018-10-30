@@ -66,10 +66,18 @@
         "roave/security-advisories": "dev-master",
         "leafo/scssphp": "^0.7.6",
         "symfony/thanks": "^1.0.7",
-        "silversolutions/silver.e-shop": "^1.4",
-        "silversolutions/silver.content": "^1.4",
-        "silversolutions/silver.orderhistory": "^1.4",
-        "silversolutions/silver.shoppriceengine": "^1.4"
+        "jms/payment-core-bundle": "~1.3",
+        "kaliop/ezmigrationbundle": "^4.0",
+        "silversolutions/xsd-to-php": "^3.6",
+        "oneup/flysystem-bundle": "^3.0",
+        "php-http/guzzle6-adapter": "^1.1",
+        "ramsey/uuid": "^3.5",
+        "tedivm/stash-bundle": "~0.4",
+        "silversolutions/content-loader-bundle": "^4.0@beta",
+        "silversolutions/silver.e-shop": "~1.4.0",
+        "silversolutions/silver.content": "~1.4.0",
+        "silversolutions/silver.orderhistory": "~1.4.0",
+        "silversolutions/silver.shoppriceengine": "~1.4.0"
     },
     "require-dev": {
         "behat/behat": "^3.4.3",
@@ -107,7 +115,11 @@
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"
         ],
         "ezplatform-install": [
-            "@php bin/console ezplatform:install ezplatform-ee-clean"
+            "@php bin/console ezplatform:install ezplatform-ee-clean",
+            "@php bin/console ezplatform:install ezcommerce_installer"
+        ],
+        "ezcommerce-install": [
+            "@ezplatform-install"
         ]
     },
     "config": {
@@ -117,6 +129,11 @@
         }
     },
     "extra": {
+        "ez-install-name": "eZ Commerce",
+        "ez-install-command": [
+            "bash install-solr.sh",
+            "composer ezcommerce-install"
+        ],
         "symfony-app-dir": "app",
         "symfony-bin-dir": "bin",
         "symfony-var-dir": "var",
