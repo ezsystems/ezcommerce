@@ -13,11 +13,12 @@
 
 ### How to get access to eZ Commerce?
  While this meta repository, `ezcommerce`, is public to ease installation and upgrades, full access can be obtained in one of three ways:
-- Request an online demo on [ez.no](https://ez.no/Products/eZ-Commerce)
-- As a partner, request a trial versions true your sales represantive.
-- As a customer _with_ an eZ Commerce subscription, get full version from [Service Portal](https://support.ez.no/Downloads).
-  Or by setting up [Composer Authentication Tokens](https://doc.ez.no/display/DEVELOPER/Using+Composer) for use in combination with this repository.
+- Request an online demo on [ez.no](https://ez.no/Products/eZ-Commerce)*
+- As a partner, request a trial versions true your sales represantive.*
+- As a customer _with_ an eZ Commerce subscription, get full version from [Service Portal](https://support.ez.no/Downloads)*.
+  Or by setting up [Composer Authentication Tokens](https://doc.ez.no/display/DEVELOPER/Using+Composer) for use in combination with this repository**.
 
+\* _Comming soon._  \*\* _Available._
 
 ## COPYRIGHT
 Copyright (C) 1999-2018 eZ Systems AS. All rights reserved.
