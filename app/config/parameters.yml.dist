@@ -6,7 +6,7 @@
 parameters:
     # A secret key that's used to generate certain security-related tokens
     env(SYMFONY_SECRET): ThisEzPlatformTokenIsNotSoSecret_PleaseChangeIt
-    env(JMS_PAYMENT_SECRET): 'get it from ./vendor/defuse/php-encryption/bin/generate-defuse-key'
+    env(JMS_PAYMENT_SECRET): def00000706ea7318427e72fcea2c8ceb86773a4310e35119c48e3029196acfead1ba8cc898f48d1ef9cb3f7ebe191ab46eaf67ec94a2b6bd17c079ac7277de0175b9e3e
 
     # Settings for database backend used by Doctrine DBAL
     # In turn used for default storage engine & default search engine (if legacy is configured as search engine)
