@@ -26,6 +26,7 @@ doctrine:
                 user: '%database_user%'
                 password: '%database_password%'
                 charset: utf8mb4
+                server_version: '%database_server_version%'
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
