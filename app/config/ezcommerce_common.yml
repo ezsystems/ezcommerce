@@ -1,0 +1,73 @@
+# common parts
+parameters:
+    siso_search.de.facet_position: left
+    siso_search.en.facet_position: left
+
+    siso_core.de.standard_price_factory.fallback_currency: EUR
+    siso_core.en.standard_price_factory.fallback_currency: USD
+    siso_core.default.automatic_currency_conversion: true
+    siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
+    siso_price.default.price_export.product_type_filter: [ses_product]
+    siso_core.default.breadcrumb_content_label_fields: ['name', 'title']
+
+    siso_search.de.facet_position: left
+    siso_search.en.facet_position: left
+
+    siso_core.de.standard_price_factory.fallback_currency: EUR
+    siso_core.en.standard_price_factory.fallback_currency: USD
+    siso_core.default.automatic_currency_conversion: true
+    siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
+    siso_price.default.price_export.product_type_filter: [ses_product]
+    siso_core.default.breadcrumb_content_label_fields: ['name', 'title']
+
+    siso_seo.default.is_seo_bundle_enabled: false
+    siso_core.default.navigation.content:
+        types: ["st_module", "folder", "article", "landing_page", "ses_productcatalog", "folder_news", "folder_events", "blog", "folder_contacts"]
+        sections: [1, 2, 9]
+        enable_priority_zero: false
+        #additional field keys for translating navigation node label
+        label_fields: ['name', 'title']
+        additional_fields: ['intro', 'media', 'alternative_title', 'alternative_intro', 'alternative_image']
+    silver_eshop.default.path_prefix_seo: ''
+
+ez_search_engine_solr:
+    endpoints:
+        endpoint0:
+            dsn: '%env(SOLR_DSN)%'
+            core: '%env(SOLR_CORE)%'
+    connections:
+        default:
+            entry_endpoints:
+                - endpoint0
+            mapping:
+                default: endpoint0
+apache_tika:
+    path: '%apache_tika_path%'
+
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+        - 'SilversolutionsEshopBundle:Forms:form_div_layout.html.twig'
+
+ezpublish:
+    imagemagick:
+        enabled: true
+        path: '%siso_imagemagick_path%'
+
+jms_payment_core:
+    encryption:
+        provider: defuse_php_encryption
+        secret: '%env(JMS_PAYMENT_SECRET)%'
+        enabled: true
+
+stash:
+    caches:
+        default:
+            drivers:
+                - FileSystem
+            inMemory: true
+            registerDoctrineAdapter: false
+            FileSystem:
+                keyHashFunction: crc32

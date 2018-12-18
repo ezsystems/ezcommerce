@@ -12,9 +12,9 @@ parameters:
     siso_paypal_payment.receiver_email: shop@silver.de
     silver_tools.default.translationFolderId: 112
     siso_core.default.user_group_location: 106
-    siso_core.default.user_group_location.business: 106
-    siso_core.default.user_group_location.private: 106
-    siso_core.default.product_catalog_content_type_id: 46
+    siso_core.default.user_group_location.business: 385
+    siso_core.default.user_group_location.private: 388
+    siso_core.default.product_catalog_content_type_id: 45
 
     ezcommerce.installer.migration_files_path: %kernel.project_dir%/migrations/demo
 

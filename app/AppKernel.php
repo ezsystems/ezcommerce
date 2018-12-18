@@ -82,13 +82,14 @@ class AppKernel extends Kernel
             new Siso\Bundle\VoucherBundle\SisoVoucherBundle(),
             new Siso\ShopPriceEnginePluginBundle\ShopPriceEnginePluginBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new JMS\JobQueueBundle\JMSJobQueueBundle(),
             new Siso\Bundle\LocalOrderManagementBundle\SisoLocalOrderManagementBundle(),
             new Siso\Bundle\NewsletterBundle\SisoNewsletterBundle(),
             new Siso\Bundle\VariantTypeBundle\SisoVariantTypeBundle(),
             new Siso\Bundle\SpecificationsTypeBundle\SisoSpecificationsTypeBundle(),
             new Siso\Bundle\ContentPluginBundle\SisoContentPluginBundle(),
-            new Siso\Bundle\ContentLoaderBundle\SisoContentLoaderBundle(),
             new Siso\Bundle\OrderHistoryBundle\SisoOrderHistoryBundle(),
+            new \Siso\AdminErpPluginBundle\SisoAdminErpPluginBundle(),
 
             // Application
             new AppBundle\AppBundle(),
