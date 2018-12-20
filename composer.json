@@ -12,7 +12,7 @@
     ],
     "repositories": [
         { "type": "composer", "url": "https://updates.ez.no/ttl" },
-        { "type": "composer", "url": "https://updates.ez.no/ttl_com" }
+        { "type": "composer", "url": "https://updates.ez.no/ttl_com_adv" }
     ],
     "replace": {
         "ezsystems/ezstudio": "*",
@@ -62,10 +62,11 @@
         "ramsey/uuid": "^3.8",
         "sensio/distribution-bundle": "^5.0.23",
         "silversolutions/content-loader-bundle": "^4.0@beta",
-        "silversolutions/silver.content": "~1.4.0",
-        "silversolutions/silver.e-shop": "~1.4.0",
-        "silversolutions/silver.orderhistory": "~1.4.0",
-        "silversolutions/silver.shoppriceengine": "~1.4.0",
+        "silversolutions/silver.adminerp": "~2.3@beta",
+        "silversolutions/silver.content": "~2.3@beta",
+        "silversolutions/silver.e-shop": "~2.3@beta",
+        "silversolutions/silver.orderhistory": "~2.3@beta",
+        "silversolutions/silver.shoppriceengine": "~2.3@beta",
         "silversolutions/xsd-to-php": "^3.6",
         "symfony/assetic-bundle": "^2.8.2",
         "symfony/monolog-bundle": "^3.3.1",
