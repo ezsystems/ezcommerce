@@ -61,6 +61,7 @@
         "php-http/guzzle6-adapter": "^1.1",
         "ramsey/uuid": "^3.8",
         "sensio/distribution-bundle": "^5.0.23",
+        "sensiolabs/security-checker": "^5.0",
         "silversolutions/content-loader-bundle": "^4.0@beta",
         "silversolutions/silver.content": "~1.4.0",
         "silversolutions/silver.e-shop": "~1.4.0",
@@ -88,7 +89,6 @@
         "ezsystems/behat-screenshot-image-driver-cloudinary": "^1.0.0",
         "ezsystems/behatbundle": "^6.5.4",
         "phpunit/phpunit": "^6.5.13",
-        "roave/security-advisories": "dev-master",
         "sensio/generator-bundle": "^3.1.7",
         "symfony/phpunit-bridge": "^3.4.18"
     },
@@ -103,7 +103,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "@php bin/console bazinga:js-translation:dump --merge-domains",
-            "@php bin/console assetic:dump"
+            "@php bin/console assetic:dump",
+            "@php bin/security-checker security:check"
         ],
         "post-install-cmd": [
             "@symfony-scripts"
