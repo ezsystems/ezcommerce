@@ -42,6 +42,7 @@ class AppKernel extends Kernel
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new EzSystems\EzPlatformDesignEngineBundle\EzPlatformDesignEngineBundle(),
             new EzSystems\EzPlatformStandardDesignBundle\EzPlatformStandardDesignBundle(),
+            new EzSystems\EzPlatformRichTextBundle\EzPlatformRichTextBundle(),
             new EzSystems\EzPlatformAdminUiBundle\EzPlatformAdminUiBundle(),
             new EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle(),
             new EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle(),
@@ -57,7 +58,6 @@ class AppKernel extends Kernel
             // eZ Commerce
             new FOS\CommentBundle\FOSCommentBundle(),
             new Tedivm\StashBundle\TedivmStashBundle(),
-
             new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
             new Nelmio\SolariumBundle\NelmioSolariumBundle(),
             new JMS\Payment\CoreBundle\JMSPaymentCoreBundle(),
@@ -90,7 +90,6 @@ class AppKernel extends Kernel
             new Siso\Bundle\ContentPluginBundle\SisoContentPluginBundle(),
             new Siso\Bundle\OrderHistoryBundle\SisoOrderHistoryBundle(),
             new \Siso\AdminErpPluginBundle\SisoAdminErpPluginBundle(),
-
             // Application
             new AppBundle\AppBundle(),
         ];
