@@ -62,11 +62,11 @@
         "ramsey/uuid": "^3.8",
         "sensio/distribution-bundle": "^5.0.23",
 
-        "silversolutions/silver.adminerp": "~2.3.0@beta",
-        "silversolutions/silver.content": "~2.3.0@beta",
-        "silversolutions/silver.e-shop": "~2.3.0@beta",
-        "silversolutions/silver.orderhistory": "~2.3.0@beta",
-        "silversolutions/silver.shoppriceengine": "~2.3.0@beta",
+        "silversolutions/silver.adminerp": "~2.4.0@beta",
+        "silversolutions/silver.content": "~2.4.0@beta",
+        "silversolutions/silver.e-shop": "~2.4.0@beta",
+        "silversolutions/silver.orderhistory": "~2.4.0@beta",
+        "silversolutions/silver.shoppriceengine": "~2.4.0@beta",
 
         "symfony/assetic-bundle": "^2.8.2",
         "symfony/monolog-bundle": "^3.3.1",

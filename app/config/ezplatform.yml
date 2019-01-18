@@ -17,10 +17,11 @@ ezpublish:
         list:
           - de
           - en
+          - import
           - site
           - admin
         groups:
-            site_group: [de, en, site]
+            site_group: [de, en, import, site]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
@@ -40,6 +41,13 @@ ezpublish:
                 cookie_httponly: false
         en:
             languages: [eng-GB, eng-US]
+            session:
+                name: eZCommerce
+                cookie_lifetime: 86400
+                cookie_httponly: false
+
+        import:
+            languages: [ger-DE, eng-GB]
             session:
                 name: eZCommerce
                 cookie_lifetime: 86400
