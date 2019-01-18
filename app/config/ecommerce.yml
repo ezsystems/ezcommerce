@@ -1,4 +1,5 @@
 imports: 
     - { resource: '@SilversolutionsEshopBundle/Resources/config/config_data_provider_econtent.yml' }
+    - { resource: ezcommerce_demo.yml }
     - { resource: ezcommerce_common.yml }
     - { resource: ezcommerce_advanced.yml }
