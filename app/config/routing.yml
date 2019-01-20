@@ -113,3 +113,7 @@ siso_orderhistory:
 siso_erp:
     resource: "@SisoAdminErpPluginBundle/Resources/config/routing.yml"
     prefix: /
+
+silver_eshop_rest_api:
+    resource: "@SilversolutionsEshopBundle/Resources/config/routing_rest.yml"
+    prefix:   '%ezpublish_rest.path_prefix%'
