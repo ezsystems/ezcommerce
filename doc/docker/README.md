@@ -228,14 +228,14 @@ other containers. This means bigger disk space footprint and longer loading time
 It is also more complicated to make this approach work with docker stack so only a docker-compose example is provided.
 
 ```sh
-export COMPOSE_FILE=doc/docker/base-prod.yml:doc/docker/create-dataset.yml:doc/docker/distribution.yml
+export COMPOSE_FILE=doc/docker/base-prod.yml:doc/docker/create-dataset.yml:doc/docker/distribution.yml:doc/docker/solr.yml
 # If not already done, install setup, and generate database dump :
 docker-compose -f doc/docker/install.yml up --abort-on-container-exit
 
 # Build docker_app and docker_web images ( php and nginx )
 # The docker_app image (which contain both php and eZ Platform) will be used as base image when creating the image which
 # only contains the eZ Platform files.
-docker-compose -f doc/docker/base-prod.yml build --no-cache app
+docker-compose -f doc/docker/base-prod.yml -f doc/docker/solr.yml build --no-cache app
 
 # Optional, only build the images, do not create containers
 docker-compose build --no-cache distribution
