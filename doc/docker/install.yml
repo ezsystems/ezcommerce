@@ -12,6 +12,11 @@ services:
      - MYSQL_PASSWORD=$DATABASE_PASSWORD
      - MYSQL_DATABASE=$DATABASE_NAME
 
+  solr_ezcommerce:
+    build:
+      context: ../../
+      dockerfile: doc/docker/Dockerfile-solr
+
   install_app:
     image: ${PHP_IMAGE_DEV}
     volumes:
@@ -19,6 +24,7 @@ services:
      - ${COMPOSER_HOME}:/root/.composer:cached
     depends_on:
      - install_db
+     - solr_ezcommerce
     environment:
      - COMPOSER_MEMORY_LIMIT
      - SYMFONY_ENV=${SYMFONY_ENV-prod}
@@ -28,6 +34,9 @@ services:
      - DATABASE_PASSWORD
      - DATABASE_NAME
      - DATABASE_HOST=install_db
+     - DATABASE_SERVER_VERSION
+     - SEARCH_ENGINE=solr
+     - SOLR_DSN=http://solr_ezcommerce:8983/solr
     # Dumping autoload using --optimize-autoloader to keep performenace on a usable level, not needed on linux host.
     # Second chown line:  For dev and behat tests we give a bit extra rights, never do this for prod.
     command: >
