@@ -17,10 +17,11 @@ ezpublish:
         list:
           - de
           - en
+          - import
           - site
           - admin
         groups:
-            site_group: [de, en, site]
+            site_group: [de, en, import, site]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
@@ -34,12 +35,25 @@ ezpublish:
     system:
         de:
             languages: [ger-DE, eng-GB]
-        en:
-            languages: [eng-GB, eng-US]
-        site_group:
             session:
                 name: eZCommerce
                 cookie_lifetime: 86400
+                cookie_httponly: false
+        en:
+            languages: [eng-GB, eng-US]
+            session:
+                name: eZCommerce
+                cookie_lifetime: 86400
+                cookie_httponly: false
+
+        import:
+            languages: [ger-DE, eng-GB]
+            session:
+                name: eZCommerce
+                cookie_lifetime: 86400
+                cookie_httponly: false
+
+        site_group:
             # Cache pool service, needs to be different per repository (database) on multi repository install.
             cache_service_name: '%cache_pool%'
             # These reflect the current installers, complete installation before you change them. For changing var_dir
@@ -62,6 +76,10 @@ ezpublish:
                     service_id: '%fastly_service_id%'
                     key: '%fastly_key%'
 
+        admin:
+            session:
+                name: eZCommerce
+                cookie_lifetime: 86400
         # WARNING: Do not remove or rename this group.
         admin_group:
             cache_service_name: '%cache_pool%'
