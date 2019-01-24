@@ -1,13 +1,13 @@
 {
-    "name": "ezsystems/ezcommerce",
+    "name": "ezsystems/ezcommerce-advanced",
     "description": "eZ Commerce distribution",
-    "homepage": "https://github.com/ezsystems/ezcommerce",
+    "homepage": "https://github.com/ezsystems/ezcommerce-advanced",
     "license": "proprietary",
     "type": "project",
     "authors": [
         {
             "name": "eZ dev-team & eZ Community",
-            "homepage": "https://github.com/ezsystems/ezcommerce/contributors"
+            "homepage": "https://github.com/ezsystems/ezcommerce-advanced/contributors"
         }
     ],
     "repositories": [
