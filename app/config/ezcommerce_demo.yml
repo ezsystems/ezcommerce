@@ -1,4 +1,23 @@
 parameters:
+    # settings for ERP in order to use the right fallback customer numbers for customers without customer no
+    siso_core.template_debitor.customer_numbers:
+        #configuration for the zone
+        EU:
+            #configuration for the country
+            DE:
+                #customer groups possible:
+                #RBV: 10001
+                #more groups
+                #RBV_DVGW: 10002
+                #default if no customer groups available
+                default: 20000
+            #default value for the zone, if no country is specified
+            default: 40000
+        World:
+            default: 20000
+        #default value if no zone is specified
+        default: 20000
+
 
     # facets for icecat demo products
     siso_search.default.simple_facet_definitions:
