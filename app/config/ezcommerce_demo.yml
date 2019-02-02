@@ -1,4 +1,10 @@
 parameters:
+
+    # ERP demo settings
+    siso_erp.de.web_connector.service_location: 'http://ezcommerce-erp.silver-eshop.de?config=ezcommerce-ms-nav'
+    siso_erp.en.web_connector.service_location: 'http://ezcommerce-erp.silver-eshop.de?config=ezcommerce-ms-nav'
+    siso_erp.admin.web_connector.service_location: 'http://ezcommerce-erp.silver-eshop.de?config=ezcommerce-ms-nav'
+
     # settings for ERP in order to use the right fallback customer numbers for customers without customer no
     siso_core.template_debitor.customer_numbers:
         #configuration for the zone
