@@ -1,4 +1,6 @@
-FROM solr:6-alpine
+FROM solr:6.6-alpine
+
+ARG SOLR_PORT=8983
 
 # Copy solr config from the version used by eZ Platform
 COPY vendor/ezsystems/ezplatform-solr-search-engine/lib/Resources/config/solr/ /opt/solr/server/tmp
@@ -18,5 +20,8 @@ RUN mkdir -p /opt/solr/server/ez/template \
 # Set our core config as home
 ENV SOLR_HOME /opt/solr/server/ez
 
-# Make sure core is created on startup
-CMD ["solr-create", "-c", "collection1", "-d", "/opt/solr/server/ez/template"]
+# Make sure cores are created on startup
+RUN bin/solr -s ez -p "$SOLR_PORT" \
+ && bin/solr create_core -c collection1 -d server/ez/template -p "$SOLR_PORT" \
+ && bin/solr create_core -c econtent -d server/ez/template -p "$SOLR_PORT" \
+ && bin/solr create_core -c econtent_back -d server/ez/template -p "$SOLR_PORT"
