@@ -23,5 +23,7 @@ ENV SOLR_HOME /opt/solr/server/ez
 # Make sure cores are created on startup
 RUN bin/solr -s ez -p "$SOLR_PORT" \
  && bin/solr create_core -c collection1 -d server/ez/template -p "$SOLR_PORT" \
- && bin/solr create_core -c econtent -d server/ez/template -p "$SOLR_PORT" \
- && bin/solr create_core -c econtent_back -d server/ez/template -p "$SOLR_PORT"
+ && bin/solr create_core -c econtent1 -d server/ez/template -p "$SOLR_PORT" \
+ && bin/solr create_core -c econtent2 -d server/ez/template -p "$SOLR_PORT" \
+ && wget -q -O /dev/null http://127.0.0.1:"$SOLR_PORT"/solr/admin/cores?action=RENAME\&core=econtent1\&other=econtent\&wt=json \
+ && wget -q -O /dev/null http://127.0.0.1:"$SOLR_PORT"/solr/admin/cores?action=RENAME\&core=econtent2\&other=econtent_back\&wt=json
