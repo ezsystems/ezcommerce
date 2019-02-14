@@ -39,17 +39,29 @@ rediscache:
 # vendor/ezsystems/ezplatform-solr-search-engine/bin/generate-solr-config.sh
 # Multi core setup is currently not supported on Platform.sh. Sharding does not work as the cores are
 # unable to reach each other
-#solrsearch:
-#    type: solr:6.6
-#    disk: 512
-#    configuration:
-#        configsets:
-#            mainconfig: !archive "configsets/solr6"
-#        cores:
-#            collection1:
-#                core_properties: |
-#                    configSet=mainconfig
-#                    schema=schema.xml
-#        endpoints:
-#            collection1:
-#                core: collection1
+solrsearch:
+    type: solr:6.6
+    disk: 512
+    configuration:
+        configsets:
+            mainconfig: !archive "configsets/solr6"
+        cores:
+            collection1:
+                core_properties: |
+                    configSet=mainconfig
+                    schema=schema.xml
+            econtent:
+                core_properties: |
+                    configSet=mainconfig
+                    schema=schema.xml
+            econtent_back:
+                core_properties: |
+                    configSet=mainconfig
+                    schema=schema.xml
+        endpoints:
+            collection1:
+                core: collection1
+            econtent:
+                core: econtent
+            econtent_back:
+                core: econtent_back
