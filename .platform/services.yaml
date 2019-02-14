@@ -50,18 +50,18 @@ solrsearch:
                 core_properties: |
                     configSet=mainconfig
                     schema=schema.xml
-            econtent:
+            econtent1:
                 core_properties: |
                     configSet=mainconfig
                     schema=schema.xml
-            econtent_back:
+            econtent2:
                 core_properties: |
                     configSet=mainconfig
                     schema=schema.xml
         endpoints:
             collection1:
                 core: collection1
-            econtent:
-                core: econtent
-            econtent_back:
-                core: econtent_back
+            econtent1:
+                core: econtent1
+            econtent2:
+                core: econtent2
