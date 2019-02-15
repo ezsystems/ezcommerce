@@ -128,5 +128,9 @@ if (isset($relationships['solr'])) {
         $container->setParameter('solr_dsn', sprintf('http://%s:%d/%s', $endpoint['host'], $endpoint['port'], 'solr'));
         // To set solr_core parameter we assume path is in form like: "solr/collection1"
         $container->setParameter('solr_core', substr($endpoint['path'], 5));
+
+        $container->setParameter('siso_search.solr.host', $endpoint['host']);
+        $container->setParameter('siso_search.solr.port', $endpoint['port']);
+        $container->setParameter('siso_search.solr.core', $endpoint['rel']);
     }
 }
