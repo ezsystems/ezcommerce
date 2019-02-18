@@ -118,6 +118,22 @@ crons:
         # NOTE: Platform.sh PS does not execute every minute, so might sometimes miss jobs scheduled for a given time
         spec: "* * * * *"
         cmd: "php bin/console ezplatform:cron:run"
+    refresh:
+        # Checks for changes and refresh cache
+        spec: "*/5 * * * *"
+        cmd: "php bin/console silversolutions:cache:refresh"
+    lostorders:
+        # Send lost orders to the ERP
+        spec: "*/5 * * * *"
+        cmd: "php bin/console silversolutions:lostorder:process"
+    writestat:
+        # Calculate statistical data for active sessions
+        spec: "*/5 * * * *"
+        cmd: "php bin/console silversolutions:sessions --env=prod write_stat"
+    jobsrun:
+        # Run background jobs
+        spec: "*/5 * * * *"
+        cmd: "php bin/console jms-job-queue:run -r 180"
     weekly:
         spec: "0 0 * * 0"
         cmd: "php bin/console ezplatform:check-urls"
