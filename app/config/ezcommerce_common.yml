@@ -4,7 +4,8 @@ parameters:
     siso_search.en.facet_position: left
 
     siso_core.de.standard_price_factory.fallback_currency: EUR
-    siso_core.en.standard_price_factory.fallback_currency: USD
+    siso_core.en.standard_price_factory.fallback_currency: EUR
+
     siso_core.default.automatic_currency_conversion: true
     siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
     siso_price.default.price_export.product_type_filter: [ses_product]
@@ -13,9 +14,6 @@ parameters:
     siso_search.de.facet_position: left
     siso_search.en.facet_position: left
 
-    siso_core.de.standard_price_factory.fallback_currency: EUR
-    siso_core.en.standard_price_factory.fallback_currency: USD
-    siso_core.default.automatic_currency_conversion: true
     siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
     siso_price.default.price_export.product_type_filter: [ses_product]
     siso_core.default.breadcrumb_content_label_fields: ['name', 'title']

@@ -31,6 +31,7 @@ services:
      - RECOMMENDATIONS_CUSTOMER_ID
      - RECOMMENDATIONS_LICENSE_KEY
      - PUBLIC_SERVER_URI
+     - SISO_SEARCH_SOLR_HOST
     networks:
      - backend
     volumes:
