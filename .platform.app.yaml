@@ -26,7 +26,7 @@ relationships:
     # this relationship and the corresponding service in .platform/services.yaml
     #redissession: 'redissession:redis'
     # If you wish to use solr, uncomment this relationship and the corresponding service in .platform/services.yaml
-    #solr: 'solrsearch:collection1'
+    solr: 'solrsearch:collection1'
 
 variables:
     #php:
@@ -90,8 +90,7 @@ hooks:
         set -e
         # Mainly relevant for eZ Platform demo usage, for own setup adapt this or remove and rely on migrations.
         if [ ! -f web/var/.platform.installed ]; then
-            . ./.env
-            php -d memory_limit=-1 bin/console ezplatform:install $INSTALL_EZ_INSTALL_TYPE
+            php -d memory_limit=-1 `which composer` ezplatform-install
             touch web/var/.platform.installed
         fi
         # When deploying changes to existing cluster, clear all cache now that we have shared mounts available
@@ -119,6 +118,22 @@ crons:
         # NOTE: Platform.sh PS does not execute every minute, so might sometimes miss jobs scheduled for a given time
         spec: "* * * * *"
         cmd: "php bin/console ezplatform:cron:run"
+    refresh:
+        # Checks for changes and refresh cache
+        spec: "*/5 * * * *"
+        cmd: "php bin/console silversolutions:cache:refresh"
+    lostorders:
+        # Send lost orders to the ERP
+        spec: "*/5 * * * *"
+        cmd: "php bin/console silversolutions:lostorder:process"
+    writestat:
+        # Calculate statistical data for active sessions
+        spec: "*/5 * * * *"
+        cmd: "php bin/console silversolutions:sessions --env=prod write_stat"
+    jobsrun:
+        # Run background jobs
+        spec: "*/5 * * * *"
+        cmd: "php bin/console jms-job-queue:run -r 180"
     weekly:
         spec: "0 0 * * 0"
         cmd: "php bin/console ezplatform:check-urls"
