@@ -3,9 +3,9 @@ if [ $# -gt 0 ]; then
     PORT=$1
 fi
 
-wget http://archive.apache.org/dist/lucene/solr/6.6.0/solr-6.6.0.tgz
-tar xfz solr-6.6.0.tgz
-mv solr-6.6.0 solr
+wget http://archive.apache.org/dist/lucene/solr/6.6.5/solr-6.6.5.tgz
+tar xfz solr-6.6.5.tgz
+mv solr-6.6.5 solr
 cd solr
 mkdir -p server/ez/template
 cp -R ../migrations/solr/* server/ez/template
