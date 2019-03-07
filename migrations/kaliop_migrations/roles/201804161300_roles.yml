@@ -1,4 +1,10 @@
 -
+    type: reference
+    mode: load
+    file: 'var/migration/references.yml'
+    overwrite: true
+
+-
     type: role
     mode: create
     name: 'Ecommerce anonymous'
@@ -13,7 +19,7 @@
             module: user
             function: login
             limitations:
-                - { identifier: SiteAccess, values: [site,en] }
+                - { identifier: SiteAccess, values: [site] }
         -
             module: siso_policy
             function: read_basket
@@ -30,6 +36,11 @@
             module: siso_policy
             function: quickorder
             limitations: {  }
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__anonymous_users, reference:ref_user_group__shop_users]
+
 -
     type: role
     mode: create
@@ -39,6 +50,11 @@
             module: siso_policy
             function: checkout
             limitations: {  }
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__anonymous_users, reference:ref_user_group__shop_users]
+
 -
     type: role
     mode: create
@@ -60,3 +76,17 @@
             module: siso_policy
             function: edit_delivery
             limitations: {  }
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__shop_users]
+
+-
+    type: role
+    mode: update
+    match:
+        identifier: 'Member'
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__shop_users]

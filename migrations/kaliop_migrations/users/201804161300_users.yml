@@ -1,60 +1,56 @@
 -
-    type: content
-    mode: create
-    content_type: user_group
-    parent_location: 5
-    priority: 0
-    is_hidden: false
-    sort_field: name
-    sort_order: ASC
-#    remote_id: 711218dc7ff2138ff15941faf7d24397
-#    location_remote_id: 443de8bfdfac996c42709a6ed9644329
-    lang: eng-GB
-    section: 2
-    owner: 14
-    always_available: false
-    attributes:
-        name: 'Shop users'
-        description: 'Shop users'
-    references:
-        -
-            identifier: shop_user_group
-            attribute: location_id
+  type: reference
+  mode: set
+  identifier: ref_user_group__members
+  value: 11 #contentId
 
 -
-    type: content
-    mode: create
-    content_type: user_group
-    parent_location: reference:shop_user_group
-    priority: 0
-    is_hidden: false
-    sort_field: name
-    sort_order: ASC
-#    remote_id: 711218dc7ff2138ff15941faf7d24397
-#    location_remote_id: 443de8bfdfac996c42709a6ed9644329
-    lang: eng-GB
-    section: 2
-    owner: 14
-    always_available: false
-    attributes:
-        name: 'Private customers'
-        description: 'User group for private customers'
+  type: reference
+  mode: set
+  identifier: ref_user_group__anonymous_users
+  value: 42 #contentId
 
 -
-    type: content
-    mode: create
-    content_type: user_group
-    parent_location: reference:shop_user_group
-    priority: 0
-    is_hidden: false
-    sort_field: name
-    sort_order: ASC
-#    remote_id: 711218dc7ff2138ff15941faf7d24397
-#    location_remote_id: 443de8bfdfac996c42709a6ed9644329
-    lang: eng-GB
-    section: 2
-    owner: 14
-    always_available: false
-    attributes:
-        name: 'Business customers'
-        description: 'User group for business customers'
+  type: user_group
+  mode: create
+  parent_group_id: 4
+  priority: 0
+  section: 2
+  name: 'Shop users'
+  description: 'Shop users'
+  references:
+      -
+          identifier: ref_user_group__shop_users
+          attribute: user_group_id
+
+-
+  type: user_group
+  mode: create
+  parent_group_id: reference:ref_user_group__shop_users
+  priority: 0
+  section: 2
+  name: 'Private customers'
+  description: 'User group for private customers'
+  references:
+      -
+          identifier: ref_user_group__private_customer
+          attribute: user_group_id
+
+-
+  type: user_group
+  mode: create
+  parent_group_id: reference:ref_user_group__shop_users
+  priority: 0
+  section: 2
+  name: 'Business customers'
+  description: 'User group for business customers'
+  references:
+      -
+          identifier: ref_user_group__business_customer
+          attribute: user_group_id
+
+-
+    type: reference
+    mode: save
+    file: 'var/migration/references.yml'
+    overwrite: true

@@ -1,0 +1,9 @@
+services:
+    app.installer.ezc_clean_installer:
+        autowire: true
+        parent: ezplatform.installer.db_based_installer
+        class: AppBundle\Installer\EzCommerceCleanInstaller
+        calls:
+            - [setEnvironment, ["%kernel.environment%"]]
+        tags:
+            - { name: ezplatform.installer, type: ezcommerce-clean }

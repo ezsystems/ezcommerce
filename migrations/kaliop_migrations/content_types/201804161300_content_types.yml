@@ -2601,6 +2601,20 @@
     match:
         identifier: user
     attributes:
+        - identifier: user_account
+          type: ezuser
+          name:
+              eng-GB: 'User account'
+          description: {  }
+          required: true
+          searchable: false
+          info-collector: false
+          disable-translation: true
+          category: ''
+          position: 3
+          field-settings: {  }
+          validator-configuration:
+              PasswordValueValidator: { requireAtLeastOneUpperCaseCharacter: false, requireAtLeastOneLowerCaseCharacter: false, requireAtLeastOneNumericCharacter: false, requireAtLeastOneNonAlphanumericCharacter: false, minLength: 5 }
         -
             identifier: name
             type: ezstring
