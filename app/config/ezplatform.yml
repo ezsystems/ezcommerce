@@ -94,6 +94,8 @@ ezpublish:
                     key: '%fastly_key%'
             page_builder:
                 siteaccess_list: [de,en]
+            form_builder:
+               forms_location_id: 417
 
     url_alias:
         slug_converter:
