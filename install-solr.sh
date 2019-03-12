@@ -2,7 +2,7 @@ PORT=8983
 if [ $# -gt 0 ]; then
     PORT=$1
 fi
-
+wget http://archive.apache.org/dist/tika/tika-app-1.20.jar  -O bin/tika-app-1.20.jar
 wget https://archive.apache.org/dist/lucene/solr/6.6.5/solr-6.6.5.tgz
 tar xfz solr-6.6.5.tgz
 mv solr-6.6.5 solr
