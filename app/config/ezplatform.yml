@@ -62,8 +62,6 @@ ezpublish:
             var_dir: var/site
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
-            # all eng-GB data to other locales first.
-            languages: [eng-GB]
             content:
                 # As we by default enable EzSystemsPlatformHttpCacheBundle which is designed to expire all affected cache
                 # on changes, and as error / redirects now have separate ttl, we easier allow ttl to be greatly increased
@@ -94,6 +92,8 @@ ezpublish:
                     key: '%fastly_key%'
             page_builder:
                 siteaccess_list: [de,en]
+            form_builder:
+               forms_location_id: 417
 
     url_alias:
         slug_converter:
