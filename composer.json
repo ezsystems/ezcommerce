@@ -41,7 +41,7 @@
         "ezsystems/ezplatform-design-engine": "^2.0@dev",
         "ezsystems/ezplatform-ee-installer": "^2.4@dev",
         "ezsystems/ezplatform-form-builder": "^1.1@dev",
-        "ezsystems/ezplatform-http-cache": "~0.8@dev",
+        "ezsystems/ezplatform-http-cache": "~0.9@dev",
         "ezsystems/ezplatform-http-cache-fastly": "^1.1@dev",
         "ezsystems/ezplatform-page-builder": "^1.2@dev",
         "ezsystems/ezplatform-page-fieldtype": "^1.2@dev",
