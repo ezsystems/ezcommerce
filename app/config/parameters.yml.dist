@@ -16,6 +16,10 @@ parameters:
     env(DATABASE_NAME): ezcommerce
     env(DATABASE_USER): root
     env(DATABASE_PASSWORD):
+    env(DATABASE_CHARSET): utf8mb4
+    env(DATABASE_COLLATION): utf8mb4_unicode_520_ci
+
+    # Commerce params/envs
     env(DATABASE_SERVER_VERSION): mariadb-10.2.12
     env(SISO_SEARCH_SOLR_HOST): localhost
     env(SISO_SEARCH_SOLR_PORT): 8983
