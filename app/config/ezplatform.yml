@@ -82,7 +82,7 @@ ezpublish:
             languages: [ger-DE, eng-GB]
 
         en:
-            languages: [eng-GB, eng-US]
+            languages: [eng-GB]
 
         import:
             languages: [ger-DE, eng-GB]
