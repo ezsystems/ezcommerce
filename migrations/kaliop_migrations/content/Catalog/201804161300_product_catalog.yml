@@ -1,0 +1,21 @@
+-
+    type: content
+    mode: create
+    content_type: ses_productcatalog
+    parent_location: 2
+    priority: 1
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    lang: eng-GB
+    section: 1
+    always_available: false
+    attributes:
+        name: 'Product Catalog'
+        root_node: '56'
+        path_prefix: null
+        depth: '5'
+    references:
+        -
+            identifier: product_catalog_location_id
+            attribute: location_id

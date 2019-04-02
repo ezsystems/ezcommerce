@@ -1,0 +1,3067 @@
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: configuration
+    name:
+        eng-GB: Configuration
+    description: {  }
+    name_pattern: '<configuration_name>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: configuration_name
+            type: ezstring
+            name:
+                eng-GB: 'Configuration Name'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: configuration_file
+            type: eztext
+            name:
+                eng-GB: 'Configuration File'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 2
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: ses_category
+    name:
+        eng-GB: 'silver.e-shop category'
+    description:
+        eng-GB: 'Category for products'
+    name_pattern: '<ses_name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: ses_name
+            type: ezstring
+            name:
+                eng-GB: 'Category name'
+            description:
+                eng-GB: 'Name of the category'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_subtitle
+            type: ezstring
+            name:
+                eng-GB: Subtitle
+            description:
+                eng-GB: Subtitle
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_short_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Category description short'
+            description:
+                eng-GB: 'Short description for the category'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_long_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Category description long'
+            description:
+                eng-GB: 'Long description for the category'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_image_main
+            type: ezimage
+            name:
+                eng-GB: 'Category main image'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 5
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_code
+            type: ezstring
+            name:
+                eng-GB: 'Category code'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 6
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description:
+                eng-GB: 'Meta keywords for SEO'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description:
+                eng-GB: 'Meta tag description for SEO'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 8
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: ses_product
+    name:
+        eng-GB: 'silver.e-shop product'
+    description: {  }
+    name_pattern: '<ses_name>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: ses_name
+            type: ezstring
+            name:
+                eng-GB: Productname
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: metadata
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_subtitle
+            type: ezstring
+            name:
+                eng-GB: Subtitle
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_type
+            type: ezselection
+            name:
+                eng-GB: 'Product type'
+            description:
+                eng-GB: ''
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: metadata
+            position: 3
+            field-settings:
+                isMultiple: false
+                options: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_short_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Short description'
+            description:
+                eng-GB: ''
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_long_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Long description'
+            description:
+                eng-GB: ''
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 5
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_sku
+            type: ezstring
+            name:
+                eng-GB: SKU
+            description:
+                eng-GB: 'SKU of the product'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: metadata
+            position: 6
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_specifications
+            type: sesspecificationstype
+            name:
+                eng-GB: Specifications
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            default-value: '[]'
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_ean
+            type: ezstring
+            name:
+                eng-GB: EAN
+            description:
+                eng-GB: 'EAN of the product'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 8
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_variants
+            type: uivarvarianttype
+            name:
+                eng-GB: Variants
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            default-value: 'null'
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_manufacturer_sku
+            type: ezstring
+            name:
+                eng-GB: 'Manufacturer SKU'
+            description:
+                eng-GB: 'SKU of the product from manufacturer'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 10
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_unit_price
+            type: ezstring
+            name:
+                eng-GB: 'Unit price'
+            description:
+                eng-GB: ''
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_image_main
+            type: ezimage
+            name:
+                eng-GB: 'Product image'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_manufacturer
+            type: ezstring
+            name:
+                eng-GB: Manufacturer
+            description:
+                eng-GB: ''
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 13
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_color
+            type: ezstring
+            name:
+                eng-GB: Color
+            description:
+                eng-GB: ''
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 14
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_specification
+            type: eztext
+            name:
+                eng-GB: 'Technical specification'
+            description:
+                eng-GB: ''
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 15
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: ses_video
+            type: ezstring
+            name:
+                eng-GB: Video
+            description:
+                eng-GB: 'contains the URL for the video'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 16
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_image_1
+            type: ezimage
+            name:
+                eng-GB: 'Add. Product image 1'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 17
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_image_2
+            type: ezimage
+            name:
+                eng-GB: 'Add. Product image 2'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 18
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_image_3
+            type: ezimage
+            name:
+                eng-GB: 'Add. Product image 3'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 19
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_image_4
+            type: ezimage
+            name:
+                eng-GB: 'Add Product image 4'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 20
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_currency
+            type: ezstring
+            name:
+                eng-GB: Currency
+            description:
+                eng-GB: 'The default currency of the product'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 21
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_vat_code
+            type: sesselection
+            name:
+                eng-GB: 'VAT Code'
+            description:
+                eng-GB: 'The vat code of the product'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 22
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_product_type
+            type: ezstring
+            name:
+                eng-GB: 'Product Type'
+            description:
+                eng-GB: 'a type of the product'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 23
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_packaging_unit
+            type: ezstring
+            name:
+                eng-GB: 'Packaging unit'
+            description:
+                eng-GB: 'Packaging unit'
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 24
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_min_order_quantity
+            type: ezstring
+            name:
+                eng-GB: 'Min order quantity'
+            description:
+                eng-GB: 'minimal order quantity of the product'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 25
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_max_order_quantity
+            type: ezstring
+            name:
+                eng-GB: 'Max order quantity'
+            description:
+                eng-GB: 'maximal order quantity of the product'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 26
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_unit
+            type: ezstring
+            name:
+                eng-GB: Unit
+            description:
+                eng-GB: 'Product unit'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 27
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_scaled_prices
+            type: ezmatrix
+            name:
+                eng-GB: 'Scaled prices'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 28
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_stock_numeric
+            type: ezstring
+            name:
+                eng-GB: 'Stock numeric'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 29
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_discontinued
+            type: ezboolean
+            name:
+                eng-GB: Discontinued
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 30
+            field-settings: {  }
+        -
+            identifier: tags
+            type: ezkeyword
+            name:
+                eng-GB: Tags
+            description:
+                eng-GB: 'Please add tags separated by a comma'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 31
+            field-settings: {  }
+            validator-configuration: {  }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: ses_productcatalog
+    name:
+        eng-GB: 'silver.e-shop product catalog'
+    description:
+        eng-GB: 'silver.e-shop entry point to a product catalog provided by a storage engine'
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description:
+                eng-GB: 'Name of the product catalog'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: root_node
+            type: ezstring
+            name:
+                eng-GB: 'Root node'
+            description:
+                eng-GB: 'Root node of the storage engine'
+            required: true
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: path_prefix
+            type: ezstring
+            name:
+                eng-GB: 'Path prefix'
+            description:
+                eng-GB: 'Optional path prefix for the storage engine'
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: depth
+            type: ezstring
+            name:
+                eng-GB: Depth
+            description:
+                eng-GB: 'The depth of the catalog'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 4
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: ses_product_type
+    name:
+        eng-GB: 'silver.e-shop product type'
+    description: {  }
+    name_pattern: '<ses_name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: ses_name
+            type: ezstring
+            name:
+                eng-GB: 'Product type name'
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_code
+            type: ezstring
+            name:
+                eng-GB: 'Product type code'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: ses_short_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Short description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_long_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Long description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_image_main
+            type: ezimage
+            name:
+                eng-GB: 'Product type image'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: ses_subtitle
+            type: ezstring
+            name:
+                eng-GB: Subtitle
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: st_module
+    name:
+        eng-GB: silver.module
+    description:
+        eng-GB: ''
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description:
+                eng-GB: ''
+            required: true
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: controller
+            type: ezstring
+            name:
+                eng-GB: Controller
+            description:
+                eng-GB: ''
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: params
+            type: eztext
+            name:
+                eng-GB: Parameters
+            description:
+                eng-GB: 'Semicolon separated parameters: e.g. key;value'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: st_textmodule
+    name:
+        eng-GB: Textmodule
+    description:
+        eng-GB: 'Textmodule with formatted content'
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description:
+                eng-GB: 'Name of the textmodule'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: identifier
+            type: ezstring
+            name:
+                eng-GB: Identifier
+            description:
+                eng-GB: 'The identifier of the textmodule'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: context
+            type: ezstring
+            name:
+                eng-GB: Context
+            description:
+                eng-GB: 'Optional translation context'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: content
+            type: ezrichtext
+            name:
+                eng-GB: Content
+            description:
+                eng-GB: 'The content of the textmodule'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: blog_2
+    name:
+        eng-GB: 'Folder (Blog)'
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: layout
+            type: ezpage
+            name:
+                eng-GB: Layout
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings:
+                defaultLayout: 1ZoneLayout1
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 51
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: blog_post_2
+    name:
+        eng-GB: 'Blog post'
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: date
+            type: ezdate
+            name:
+                eng-GB: Date
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            default-value: 1521673200
+            field-settings:
+                defaultType: 1
+            validator-configuration: {  }
+        -
+            identifier: author
+            type: ezstring
+            name:
+                eng-GB: Author
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: comments_enabled
+            type: ezboolean
+            name:
+                eng-GB: 'Comments enabled'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            default-value: true
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 51
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 13
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 14
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: contact
+    name:
+        eng-GB: Contact
+    description: {  }
+    name_pattern: '<lastname>, <firstname>'
+    url_name_pattern: '<lastname>-<firstname>'
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: firstname
+            type: ezstring
+            name:
+                eng-GB: Firstname
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: lastname
+            type: ezstring
+            name:
+                eng-GB: Lastname
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: position
+            type: ezstring
+            name:
+                eng-GB: Position
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: description
+            type: ezrichtext
+            name:
+                eng-GB: Description
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: photo
+            type: ezimage
+            name:
+                eng-GB: Photo
+            description: {  }
+            required: true
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: email
+            type: ezemail
+            name:
+                eng-GB: Email
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings: {  }
+            validator-configuration:
+                EmailAddressValidator: {  }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: event
+    name:
+        eng-GB: Event
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: start_date
+            type: ezdate
+            name:
+                eng-GB: 'Start date'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            default-value: 1521673200
+            field-settings:
+                defaultType: 1
+            validator-configuration: {  }
+        -
+            identifier: end_date
+            type: ezdate
+            name:
+                eng-GB: 'End date'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings:
+                defaultType: 0
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 51
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: address
+            type: ezstring
+            name:
+                eng-GB: Address
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: zipcode
+            type: ezstring
+            name:
+                eng-GB: 'Zip code'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: city
+            type: ezstring
+            name:
+                eng-GB: City
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 13
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: country
+            type: sesselection
+            name:
+                eng-GB: Country
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 14
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: map_location
+            type: ezgmaplocation
+            name:
+                eng-GB: 'Map location'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 15
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: url
+            type: ezstring
+            name:
+                eng-GB: URL
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 16
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 17
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 18
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 19
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: folder_contacts
+    name:
+        eng-GB: 'Folder (Contacts)'
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: layout
+            type: ezpage
+            name:
+                eng-GB: Layout
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings:
+                defaultLayout: 1ZoneLayout1
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 43
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: folder_events
+    name:
+        eng-GB: 'Folder (Events)'
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: layout
+            type: ezpage
+            name:
+                eng-GB: Layout
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings:
+                defaultLayout: 1ZoneLayout1
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 43
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: folder_news
+    name:
+        eng-GB: 'Folder (News)'
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: layout
+            type: ezpage
+            name:
+                eng-GB: Layout
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings:
+                defaultLayout: 1ZoneLayout1
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 43
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: news
+    name:
+        eng-GB: News
+    description: {  }
+    name_pattern: '<internal_name|title>'
+    url_name_pattern: '<title>'
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description:
+                eng-GB: 'Images & videos'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: date
+            type: ezdate
+            name:
+                eng-GB: Date
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 6
+            field-settings:
+                defaultType: 0
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description:
+                eng-GB: 'Text  shown on landingpages and listpages.'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description:
+                eng-GB: 'Image shown on landingpages and listpages.'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 51
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+-
+    type: content_type
+    mode: update
+    match:
+        identifier: user
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 50
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: salutation
+            type: sesselection
+            name:
+                eng-GB: Salutation
+            description:
+                eng-GB: 'Salutation of the shop user'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 51
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: customer_number
+            type: ezstring
+            name:
+                eng-GB: 'Customer number'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 52
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: contact_number
+            type: ezstring
+            name:
+                eng-GB: 'Contact number'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 53
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: customer_profile_data
+            type: sesprofiledata
+            name:
+                eng-GB: 'Customer profile data'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 54
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: budget_order
+            type: ezfloat
+            name:
+                eng-GB: 'Budget per order'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 55
+            field-settings: {  }
+            validator-configuration:
+                FloatValueValidator: { minFloatValue: null, maxFloatValue: null }
+        -
+            identifier: budget_month
+            type: ezfloat
+            name:
+                eng-GB: 'Budget per month'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 56
+            field-settings: {  }
+            validator-configuration:
+                FloatValueValidator: { minFloatValue: null, maxFloatValue: null }
+        -
+            identifier: ses_customer_group
+            type: sesselection
+            name:
+                eng-GB: 'Customer group'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 57
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_hastopay_vat
+            type: ezboolean
+            name:
+                eng-GB: 'Customer has to pay VAT'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 58
+            default-value: true
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: ses_display_vat
+            type: ezboolean
+            name:
+                eng-GB: 'Display VAT'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 59
+            field-settings: {  }
+            validator-configuration: {  }
+
+
+
+
+-
+    type: content_type
+    mode: update
+    match:
+        identifier: article
+    attributes:
+        -
+            identifier: internal_name
+            type: ezstring
+            name:
+                eng-GB: 'Internal name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 2
+            default-value: 'New article'
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: short_title
+            type: ezstring
+            name:
+                eng-GB: 'Short title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: author
+            type: ezauthor
+            name:
+                eng-GB: Author
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 4
+            field-settings:
+                defaultAuthor: 0
+            validator-configuration: {  }
+        -
+            identifier: intro
+            type: ezrichtext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 5
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: body
+            type: ezrichtext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 6
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: enable_comments
+            type: ezboolean
+            name:
+                eng-GB: 'Enable comments'
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: true
+            category: ''
+            position: 7
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: image
+            type: ezobjectrelation
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 8
+
+        -
+            identifier: identifier
+            type: ezstring
+            name:
+                eng-GB: Identifier
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 15
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: article_selection
+            type: ezselection
+            name:
+                eng-GB: 'Article selection'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 16
+            field-settings:
+                isMultiple: false
+                options: [Test1, Test2]
+            validator-configuration: {  }
+        -
+            identifier: html
+            type: eztext
+            name:
+                eng-GB: HTML
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 17
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: file
+            type: ezbinaryfile
+            name:
+                eng-GB: File
+            description:
+                eng-GB: 'printable PDF file'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 18
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description:
+                eng-GB: 'Images & Videos (for ContentPlugin)'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 19
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: date
+            type: ezdate
+            name:
+                eng-GB: Date
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 20
+            default-value: 1521673200
+            field-settings:
+                defaultType: 1
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: 'Alternative Title'
+            description:
+                eng-GB: 'For ContentPlugin'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 21
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezrichtext
+            name:
+                eng-GB: 'Alternative Intro'
+            description:
+                eng-GB: 'For ContentPlugin'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 22
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: 'Alternative Image'
+            description:
+                eng-GB: 'Image shown on landingpages and listpages. For ContentPlugin'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 23
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 51
+                selectionContentTypes: [image]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 24
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 25
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 26
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }

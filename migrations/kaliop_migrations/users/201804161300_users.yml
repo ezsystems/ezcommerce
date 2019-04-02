@@ -1,0 +1,60 @@
+-
+    type: content
+    mode: create
+    content_type: user_group
+    parent_location: 5
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+#    remote_id: 711218dc7ff2138ff15941faf7d24397
+#    location_remote_id: 443de8bfdfac996c42709a6ed9644329
+    lang: eng-GB
+    section: 2
+    owner: 14
+    always_available: false
+    attributes:
+        name: 'Shop users'
+        description: 'Shop users'
+    references:
+        -
+            identifier: shop_user_group
+            attribute: location_id
+
+-
+    type: content
+    mode: create
+    content_type: user_group
+    parent_location: reference:shop_user_group
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+#    remote_id: 711218dc7ff2138ff15941faf7d24397
+#    location_remote_id: 443de8bfdfac996c42709a6ed9644329
+    lang: eng-GB
+    section: 2
+    owner: 14
+    always_available: false
+    attributes:
+        name: 'Private customers'
+        description: 'User group for private customers'
+
+-
+    type: content
+    mode: create
+    content_type: user_group
+    parent_location: reference:shop_user_group
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+#    remote_id: 711218dc7ff2138ff15941faf7d24397
+#    location_remote_id: 443de8bfdfac996c42709a6ed9644329
+    lang: eng-GB
+    section: 2
+    owner: 14
+    always_available: false
+    attributes:
+        name: 'Business customers'
+        description: 'User group for business customers'
