@@ -20,7 +20,7 @@ parameters:
 
     siso_seo.default.is_seo_bundle_enabled: false
     siso_core.default.navigation.content:
-        types: ["st_module", "folder", "article", "landing_page", "ses_productcatalog", "folder_news", "folder_events", "blog", "folder_contacts"]
+        types: ["st_module", "folder", "article", "landing_page", "ses_productcatalog"]
         sections: [1, 2, 9]
         enable_priority_zero: false
         #additional field keys for translating navigation node label
