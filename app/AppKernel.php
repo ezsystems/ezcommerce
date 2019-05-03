@@ -100,6 +100,8 @@ class AppKernel extends Kernel
             new Siso\Bundle\ContentPluginBundle\SisoContentPluginBundle(),
             new Siso\Bundle\OrderHistoryBundle\SisoOrderHistoryBundle(),
             new \Siso\AdminErpPluginBundle\SisoAdminErpPluginBundle(),
+            new Siso\Bundle\InstallerBundle\SisoInstallerBundle(),
+            new \FOS\RestBundle\FOSRestBundle(),
             // Application
             new AppBundle\AppBundle(),
         ];
