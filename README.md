@@ -20,6 +20,13 @@
 
 \* _Comming soon._  \*\* _Available._
 
+### How to install 
+
+- composer install
+- bash install-solr.sh 8983
+- composer ezcommerce-install
+- php bin/console server:run
+
 ## COPYRIGHT
 Copyright (C) 1999-2018 eZ Systems AS. All rights reserved.
 

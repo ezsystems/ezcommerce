@@ -19,6 +19,8 @@ bin/solr -s ez -p "${PORT}"
 bin/solr create_core -c collection1 -d server/ez/template -p "${PORT}"
 bin/solr create_core -c econtent1 -d server/ez/template -p "${PORT}"
 bin/solr create_core -c econtent2 -d server/ez/template -p "${PORT}"
+# sometimes renaming fails since solr has not yet created cores
+sleep 5
 curl http://127.0.0.1:"${PORT}"/solr/admin/cores?action=RENAME\&core=econtent1\&other=econtent\&wt=json
 curl http://127.0.0.1:"${PORT}"/solr/admin/cores?action=RENAME\&core=econtent2\&other=econtent_back\&wt=json
 cd ..

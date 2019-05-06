@@ -15,19 +15,17 @@ ezpublish:
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
         list:
-          - de
-          - en
           - import
           - site
           - admin
         groups:
-            site_group: [de, en, import, site]
+            site_group: [ import, site]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
             # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
             admin_group: [admin]
-        default_siteaccess: en
+        default_siteaccess: site
         match:
             URIElement: 1
 
@@ -36,6 +34,7 @@ ezpublish:
     #      on single-site you can place shared config under "default" for simplicity as shown below.
     system:
         default:
+            languages: [eng-GB]
             # Cache pool service, needs to be different per repository (database) on multi repository install.
             cache_service_name: '%cache_pool%'
             # These reflect the current installers, complete installation before you change them. For changing var_dir
@@ -56,20 +55,20 @@ ezpublish:
                     key: '%fastly_key%'
 
 
-        #site_group:
-        #    design: main
+        site_group:
+            design: base_design
 
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
             # For admin this needs to contain all languages you want to translate content to on the given repository.
-            languages: [ger-DE, eng-GB]
+            languages: [eng-GB]
             design: admin
             page_builder:
-                siteaccess_list: [de,en]
+                siteaccess_list: [site]
             form_builder:
-               forms_location_id: 417
+               forms_location_id: 55
             content_tree_module:
                 contextual_tree_root_location_ids:
                     - 2 # Home (Content structure)
@@ -78,15 +77,11 @@ ezpublish:
                     - 48 # Setup
                     - 55 # Forms
 
-        de:
-            languages: [ger-DE, eng-GB]
-
-        en:
-            languages: [eng-GB, eng-US]
+        site:
+            languages: [eng-GB]
 
         import:
-            languages: [ger-DE, eng-GB]
-
+            languages: [eng-GB]
 
     url_alias:
         slug_converter:

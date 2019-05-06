@@ -1,0 +1,13 @@
+diff --git a/vendor/silversolutions/silver.e-shop/src/Silversolutions/Bundle/EshopBundle/Services/Url/BaseCatalogUrl.php b/vendor/silversolutions/silver.e-shop/src/Silversolutions/Bundle/EshopBundle/Services/Url/BaseCatalogUrl.php
+index d35d8cbb..b4587427 100644
+--- a/vendor/silversolutions/silver.e-shop/src/Silversolutions/Bundle/EshopBundle/Services/Url/BaseCatalogUrl.php
++++ b/vendor/silversolutions/silver.e-shop/src/Silversolutions/Bundle/EshopBundle/Services/Url/BaseCatalogUrl.php
+@@ -71,7 +71,7 @@ class BaseCatalogUrl extends CatalogUrl
+ 
+         // including path suffix handling, as path info from request might be without explicit path suffix
+         // as its set as default value from routing.yml (when using "/silver.catalog" without explicit suffix)
+-        if (strpos($requestUrl, $request->get('url', '')) === false) {
++        if ($request->get('url') && strpos($requestUrl, $request->get('url')) === false) {
+             $requestUrl = $requestUrl . '/' . $request->get('url', '');
+         }
+ 
