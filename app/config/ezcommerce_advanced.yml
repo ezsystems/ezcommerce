@@ -11,6 +11,7 @@ parameters:
 
     # please set in backend configsection using the ERP URL for your ERP
     siso_erp.default.web_connector.service_location: 'http://mydomain.com/mywebconnector'
+    siso_erp.web_connector.service_location: 'http://mydomain.com/mywebconnector'
 
 nelmio_solarium:
     endpoints:
