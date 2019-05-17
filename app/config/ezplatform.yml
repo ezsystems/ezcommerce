@@ -19,7 +19,7 @@ ezpublish:
           - site
           - admin
         groups:
-            site_group: [ import, site]
+            site_group: [import, site]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
