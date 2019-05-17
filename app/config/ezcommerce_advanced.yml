@@ -1,9 +1,10 @@
 parameters:
 
-    siso_core.default.logo_image: /bundles/silversolutionseshop/img/logo-advanced.png
-    siso_core.admin.logo_image: /bundles/silversolutionseshop/img/logo-advanced.png
+    siso_core.default.logo_image: /bundles/silversolutionseshop/img/logo.png
+    siso_core.admin.logo_image: /bundles/silversolutionseshop/img/logo.png
     siso_core.default.invoice_logo: /bundles/silversolutionseshop/img/invoice_logo.png
-    siso_core.default.email_header: /bundles/silversolutionseshop/img/email-header.png
+    siso_core.default.email_header: /bundles/silversolutionseshop/img/email-header-advanced.png
+
 
     siso_core.default.erp_connection: false
     siso_local_order_management.default.send_order_to_erp: false

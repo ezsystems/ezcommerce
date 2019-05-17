@@ -131,6 +131,7 @@
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"
         ],
         "ezplatform-install": [
+            "@php bin/console cache:clear",
             "@php bin/console ezplatform:install ezplatform-ee-clean",
             "@php bin/console ezplatform:install ezcommerce-clean"
         ],
