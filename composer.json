@@ -140,6 +140,7 @@
         ]
     },
     "config": {
+        "process-timeout":0,
         "bin-dir": "bin",
         "sort-packages": true,
         "preferred-install": {

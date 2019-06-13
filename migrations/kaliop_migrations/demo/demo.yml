@@ -1,0 +1,1573 @@
+# references
+# media / images
+-
+    type: reference
+    mode: set
+    identifier: ref_location_folder__media__images
+    value: 51
+
+-
+    type: reference
+    mode: set
+    identifier: ref_section__standard
+    value: 1
+-
+    type: reference
+    mode: set
+    identifier: ref_section__media
+    value: 3
+
+
+-
+    type: content_type
+    mode: update
+    content_type_group: Content
+    identifier: folder
+    name:
+        eng-GB: Folder
+    description: {  }
+    name_pattern: '<short_name|name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 1
+            default-value: Folder
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: short_name
+            type: ezstring
+            name:
+                eng-GB: 'Short name'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 100, minStringLength: null }
+        -
+            identifier: short_description
+            type: ezrichtext
+            name:
+                eng-GB: 'Short description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: description
+            type: ezrichtext
+            name:
+                eng-GB: Description
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: ''
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: folder_selection
+            type: ezselection
+            name:
+                eng-GB: 'Test selection'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+            field-settings:
+                isMultiple: false
+                options: [Left, Right]
+            validator-configuration: {  }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: ezstring
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 7
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: body
+            type: eztext
+            name:
+                eng-GB: Body
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 8
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: media
+            type: ezobjectrelationlist
+            name:
+                eng-GB: Media
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 9
+            field-settings:
+                selectionMethod: 0
+                selectionDefaultLocation: 43
+                selectionContentTypes: [image, video]
+            validator-configuration:
+                RelationListValueValidator: { selectionLimit: 0 }
+        -
+            identifier: listtype
+            type: sesselection
+            name:
+                eng-GB: Listtype
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 10
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: alternative_title
+            type: ezstring
+            name:
+                eng-GB: 'Alternative title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 11
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_intro
+            type: ezstring
+            name:
+                eng-GB: 'Alternative intro'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 12
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: alternative_image
+            type: ezobjectrelation
+            name:
+                eng-GB: 'Alternative image'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 13
+            field-settings:
+                selectionMethod: 0
+                selectionRoot: 43
+                selectionContentTypes: [image, video]
+            validator-configuration: {  }
+        -
+            identifier: meta_title
+            type: ezstring
+            name:
+                eng-GB: 'Meta title'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 14
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_description
+            type: ezstring
+            name:
+                eng-GB: 'Meta description'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 15
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: meta_keywords
+            type: ezstring
+            name:
+                eng-GB: 'Meta keywords'
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 16
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: layout
+            type: ezpage
+            name:
+                eng-GB: Layout
+            description: {  }
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 17
+            field-settings:
+                defaultLayout: 1ZoneLayout1
+            validator-configuration: {  }
+
+
+# folder: / Media / Images / Banner
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__media__images
+    section: reference:ref_section__media
+    owner: 14
+    attributes:
+        name: Banner
+        title: Banner
+    references:
+        -
+            identifier: ref_location_folder__media__images__banner
+            attribute: location_id
+
+# image: / Media / Images / Banner / the best 4 products
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__banner
+    attributes:
+        name: The 4 best products of March Banner
+        image: 'migrations/demo/images/banner/9.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__banner__the_4_best_products
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__banner__the_4_best_products
+            attribute: content_id
+
+# image: / Media / Images / Banner / Pulley H Pulley Kettle Banner
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__banner
+    attributes:
+        name: Pulley H Pulley Kettle Banner
+        image: 'migrations/demo/images/banner/4.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__banner__pulley_h
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__banner__pulley_h
+            attribute: content_id
+
+
+# folder: / Media / Images / Banner Landing Page
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__media__images
+    section: reference:ref_section__media
+    owner: 14
+    attributes:
+        name: Banner Landing Page
+        title: Banner Landing Page
+    references:
+        -
+            identifier: ref_location_folder__media__images__banner_landing_page
+            attribute: location_id
+        -
+            identifier: ref_content_folder__media__images__banner_landing_page
+            attribute: content_id
+
+# image: / Media / Images / Banner Landing Page / national pan date
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__banner_landing_page
+    attributes:
+        name: national pan date
+        image: 'migrations/demo/images/banner/2.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__banner_landing_page__national_pan_date
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__banner_landing_page__national_pan_date
+            attribute: content_id
+
+# image: / Media / Images / Banner Landing Page / mix shake drink
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__banner_landing_page
+    attributes:
+        name: mix shake drink
+        image: 'migrations/demo/images/banner/3.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__banner_landing_page__mix_shake_drink
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__banner_landing_page__mix_shake_drink
+            attribute: content_id
+
+# image: / Media / Images / Banner Landing Page / Triple BB Mixer Banner
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__banner_landing_page
+    attributes:
+        name: Triple BB Mixer Banner
+        image: 'migrations/demo/images/banner/1.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__banner_landing_page__triple_bb_mixer
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__banner_landing_page__triple_bb_mixer
+            attribute: content_id
+
+# image: / Media / Images / eZ Conference 2018
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: eZ Conference 2018
+      image: 'migrations/demo/images/media/eZ-Conference-2018_half_width_3_2.gif'
+  references:
+        -
+            identifier: ref_location_image__media__images__ez_conference
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__ez_conference
+            attribute: content_id
+
+# image: / Media / Images / Tower_bridge
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: Tower_bridge
+      image: 'migrations/demo/images/media/tower_bridge_3-2_full_width_3_2_full_width_3_2.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__tower_bridge
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tower_bridge
+            attribute: content_id
+
+# image: / Media / Images / B2B Conference 2018
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: B2B Conference 2018
+      image: 'migrations/demo/images/media/B2B-Strategiegipfel-2017_full_width_3_2.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__b2b_conference_2018
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__b2b_conference_2018
+            attribute: content_id
+
+# image: / Media / Images / Fridge Banner
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: Fridge Banner
+      image: 'migrations/demo/images/media/fridge_banner.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__fridge_banner
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__fridge_banner
+            attribute: content_id
+
+# image: / Media / Images / Kitchen
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: Kitchen
+      image: 'migrations/demo/images/media/Kitchen.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__kitchen
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__kitchen
+            attribute: content_id
+
+
+# image: / Media / Images / Microwave Banner
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: Microwave Banner
+      image: 'migrations/demo/images/media/microwave_banner.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__microwave_banner
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__microwave_banner
+            attribute: content_id
+
+# image: / Media / Images / Hummus Picture
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: Hummus Picture
+      image: 'migrations/demo/images/media/hummus_banner.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__hummus_picture
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__hummus_picture
+            attribute: content_id
+
+
+# image: / Media / Images / Eco E Toaster Banner
+-
+  type: content
+  mode: create
+  content_type: image
+  parent_location: reference:ref_location_folder__media__images
+  attributes:
+      name: Eco E Toaster Banner
+      image: 'migrations/demo/images/banner/5.jpg'
+  references:
+        -
+            identifier: ref_location_image__media__images__eco_e_toaster_banner
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__eco_e_toaster_banner
+            attribute: content_id
+
+
+# folder: / Home / Article
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: 2  #  / Home
+    section: reference:ref_section__media
+    owner: 14
+    attributes:
+        name: Article
+        title: Article
+    references:
+        -
+            identifier: ref_location_folder__home__article
+            attribute: location_id
+        -
+            identifier: ref_content_folder__home__article
+            attribute: content_id
+
+
+# Articles
+-
+    type: content
+    mode: create
+    content_type: article
+    parent_location: reference:ref_location_folder__home__article
+    priority: 1
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 78bec329ff09cfa6a426272aac97acd0
+    location_remote_id: 8f31caa5ec430d367fbc93f3251a02cd
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: null
+        title: 'eZ Conference 2018'
+        short_title: null
+        author: {  }
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>eZ Conference is the content technology summit and the largest gathering of the eZ community worldwide, bringing together experts in CMS, and professionals in digital strategy, marketing and engineering to share, learn and network.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</para><para>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</para><para>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</para></section>\n"
+        enable_comments: true
+        image:
+            destinationContentId: reference:ref_content_image__media__images__ez_conference
+            alternativeText: ''
+        identifier: null
+        article_selection: {  }
+        html: null
+        file: null
+        media:
+            destinationContentIds: {  }
+        date: 1521676800
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+-
+    type: content
+    mode: create
+    content_type: article
+    parent_location: reference:ref_location_folder__home__article
+    priority: 2
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 5162f6b8063320deba0e746f7c7d7644
+    location_remote_id: aa0218a6bd71ef7a1944a5c5e5021af8
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: null
+        title: 'Follow-up: eZ Conference 2017'
+        short_title: null
+        author: {  }
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>There’s a lot going on at eZ Systems -- and it needs to be shared and discussed. Barely nine months after the last conference, the company had already invited the community to the next conference.\_And the location could not have been more prominent. At Tower Bridge in London, partners and customers from all over the world met to talk about the new CMS trends and the coming features of eZ Platform as headless CMS.\_Against this impressive backdrop, exciting presentations and workshops were held in both the business and tracking technology fields.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>In the business field, the topic of customer orientation was a common thread running through many sessions.\_<link xlink:href=\"https://twitter.com/gerrymcgovern\" xlink:show=\"new\">Gerry McGovern’s</link>\_stirring keynote on creating a customer-focused organisation was a powerful prelude to the second day of the conference. The famous digital customer experience expert and author presented a couple of provocative theories on market and customer value that should really make brand manufacturers think!</para><para>In technical terms, the coming version 2.0 of eZ Platform was indisputably a major topic of the conference. Expectations are high and the presentations had to prove whether eZ can fulfil them. For partners in particular, the backend can only be adapted and extended by the addition of individual functions with some difficulty in the current version 1.9. However, extensive feedback from partners and customers from the past year has shown that this kind of extension is an absolute necessity for many projects. The manufacturer eZ is now responding to this feedback, and with eZ Platform 2.0, offers improved extensibility for developers and a hybrid mode for many functions. Read\_<link xlink:href=\"http://blog.silversolutions.de/2017/06/ez-events/nachlese-ez-conference-2017/\" xlink:show=\"new\">more in our blog in the detailed report by Frank Dege on the eZ Conference 2017</link>\_(DE).\_</para><para>We wish to thank eZ for its outstanding organisation as well as all speakers for the fascinating food for thought. See you at the next eZ Conference!</para></section>\n"
+        enable_comments: false
+        image:
+            destinationContentId: reference:ref_content_image__media__images__tower_bridge
+            alternativeText: ''
+        identifier: null
+        article_selection: {  }
+        html: null
+        file: null
+        media:
+            destinationContentIds: {  }
+        date: 1521676800
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+-
+    type: content
+    mode: create
+    content_type: article
+    parent_location: reference:ref_location_folder__home__article
+    priority: 3
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 152042f90c5bfc7610bded84b51aeb35
+    location_remote_id: bb35f3a9219645701a2b9bcfa556d52c
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: null
+        title: 'Follow-up: Strategy Summit B2B e-Commerce and e-Business'
+        short_title: null
+        author: {  }
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>From November 15 to 16 Berlin based project networks GmbH hosted their second annual Strategy Summit B2B e-Commerce and e-Business. Decision makers and executives from a wide range of industries met to determine their current position in terms of digitisation. The summit is a successful German networking format where e-business, marketing and digitisation managers meet up for in depth 1:1 conversations. Best practice presentations, panel discussions and workshops round out the picture.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Under the headline\_<emphasis role=\"strong\">\"From hype to daily business – Three top trends in B2B e-commerce and how your company can profit\"</emphasis>\_silver.solutions led a well received workshop where participants discussed trend topics like retailer integration, content &amp; commerce and personalisation.\_</para><para>During the summit B2B market places repeatedly came up in conversation and were discussed intensely. Not only during best practice presentations but also in between sessions people were exchanging experiences and opinions about the dos and don'ts of a market place strategy.\_ Our most recent blog post details chances and risks of a market place engagement for B2B companies.\_<link xlink:href=\"http://blog.silversolutions.de/2017/11/ecommerce/marktplaetze-und-b2b/\" xlink:show=\"new\">Visit out blog (DE)</link></para><para>We would like to thank everyone for the interesting conversations and are looking forward to the next Strategy Summit.\_</para></section>\n"
+        enable_comments: false
+        image:
+            destinationContentId: reference:ref_content_image__media__images__b2b_conference_2018
+            alternativeText: ''
+        identifier: null
+        article_selection: {  }
+        html: null
+        file: null
+        media:
+            destinationContentIds: {  }
+        date: 1521676800
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+
+-
+    type: content
+    mode: create
+    content_type: article
+    parent_location: reference:ref_location_folder__home__article
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 8ea2112274788d8a3e512658df50f114
+    location_remote_id: 239f26baf662699134460de06e081066
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: null
+        title: 'Running in Spring'
+        short_title: null
+        author:
+            -
+                id: '1'
+                name: 'Claudia Schulz'
+                email: ''
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>When the first warm rays of sunshine are felt after a long winter, not only does this revive the flora and fauna, but it also attracts many runners back outside. Longer days and warmer temperatures make the spring months especially attractive for beginners, but also ambitious runners are now extending their training.\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><title ezxhtml:level=\"2\">Start again</title><para>Spring is the ideal season for (re) getting into running training. Mild weather and the awakening nature motivate to stay outdoors and any winter bacon motivated to exercise - running combines both ideal. In our large theme special we therefore have the ten most important beginner tips summarized for your fit start in\_spring.\_</para><title ezxhtml:level=\"2\">Come back to the competition mode</title><para>If you want to run a competition in late spring or early summer\_you must start training now. It pays to once again eradicate the old training habits and try out new things in our training plan with our spring cleaning. New impulses may also give you the expert tips for the marathon, which every (prospective) marathon runner should know.</para></section>\n"
+        enable_comments: false
+        image:
+            destinationContentId: null
+        identifier: null
+        article_selection: {  }
+        html: null
+        file:
+            path: 'migrations/demo/images/Running_6.jpg'
+            filename: Running_6.jpg
+            mimeType: image/jpeg
+        media:
+            destinationContentIds: {  }
+        date: 1522022400
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+
+-
+    type: content
+    mode: create
+    content_type: article
+    parent_location: reference:ref_location_folder__home__article
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 36ca0736a850c651a19f0bd9bf5767b0
+    location_remote_id: 79fea3e70db7da7eab08525792de6806
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: null
+        title: 'Kitchens of the Future'
+        short_title: 'Kitchen Remodeling'
+        author:
+            -
+                id: '1'
+                name: 'Amit Golan'
+                email: ''
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Kitchens tend to be the center of the home. They are place where mothers or fathers, boyfriends, girlfriends, husbands or wives have a chance to prepare a delicious meal for themselves and their families. Learn how innovation is\_ starting to disrupt the kitchen appliance industry. 2018 has seen a raise in\_\_smart appliances that can be powered and controlled through various applications.\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><title ezxhtml:level=\"3\">The Future is Here</title><para>Each day more and more smart appliances begin to shape the kitchenware landscape. These appliances can be completely automated and complete a specific task without\_requiring human intervention. Few interesting appliances are\_\_the smart oven as well as the smart refrigerator. Smart refrigerator can decide automatically adjust temperature according to the product that are inside the fridge. This feature extends the\_shelf life of\_products 2.2 avg/days.\_ However, that is only the tip of the iceberg. Smart appliances are able to set themselves to work and adjust according to their surroundings. For example, smart microwaves are able to identify when people are not at home in order to shut off and not require electricity.\_ Thus reducing ones electric bill drastically.\_</para><title ezxhtml:level=\"3\">Consumers want Smart and Low cost Appliances</title><para>Consumers are in search of appliances that are environmental\_friendly and give you more for your buck. They are looking for appliances that will reduce their overall bills and will be able to do more in a smart manner. today, millennial are busier and want products that will allow them to be more efficient with their time.\_Smart appliances solve many pain points that could not be addressed with low-tech appliances.\_</para><para>\_</para></section>\n"
+        enable_comments: false
+        image:
+            destinationContentId: null
+        identifier: null
+        article_selection: {  }
+        html: null
+        file: null
+        media:
+            destinationContentIds: {  }
+        date: 1523491200
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+    references:
+          -
+              identifier: ref_location_article__home__article__kitchen_of_the_future
+              attribute: location_id
+          -
+              identifier: ref_content_article__home__article__kitchen_of_the_future
+              attribute: content_id
+
+# Website content type group
+-
+    type: content_type_group
+    mode: create
+    identifier: Website
+
+
+# folder_news: / Home /  News
+-
+    type: content
+    mode: create
+    content_type: folder_news
+    parent_location: 2
+    priority: 5
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: c297ff48bbf1f3de0d6495e37ece7b00
+    location_remote_id: 5c4b5b008895e14dc72f08e83aa17592
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: News
+        title: News
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Read here the latest news about silver.solutions, interesting projects, our team and products. For even more up to date information\_<link xlink:href=\"https://twitter.com/silver_berlin\" xlink:show=\"new\">follow us on Twitter @silver_berlin</link>\_or subscribe to our\_<link xlink:href=\"https://www.silversolutions.de/en/Newsletter\" xlink:show=\"new\">product newsletter</link>.\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</para></section>\n"
+        media:
+            destinationContentIds: {  }
+        layout: null
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: 'Meta title'
+        meta_description: 'Meta description'
+        meta_keywords: 'Meta keywords'
+    references:
+          -
+              identifier: ref_location_folder_news__home__news
+              attribute: location_id
+          -
+              identifier: ref_content_folder_news__home__news
+              attribute: content_id
+
+# news: / Home /  News / Follow-up: eZ Conference 2017
+-
+    type: content
+    mode: create
+    content_type: news
+    parent_location: reference:ref_location_folder_news__home__news
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 3882f710439aea72d9fde69b4e3b6965
+    location_remote_id: 67db1e2caf74f4ac5937253da200fe2d
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Follow-up: eZ Conference 2017'
+        title: 'Follow-up: eZ Conference 2017'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>There’s a lot going on at eZ Systems -- and it needs to be shared and discussed. Barely nine months after the last conference, the company had already invited the community to the next conference.\_And the location could not have been more prominent. At Tower Bridge in London, partners and customers from all over the world met to talk about the new CMS trends and the coming features of eZ Platform as headless CMS.\_Against this impressive backdrop, exciting presentations and workshops were held in both the business and tracking technology fields.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>In the business field, the topic of customer orientation was a common thread running through many sessions.\_<link xlink:href=\"https://twitter.com/gerrymcgovern\" xlink:show=\"new\">Gerry McGovern’s</link>\_stirring keynote on creating a customer-focused organisation was a powerful prelude to the second day of the conference. The famous digital customer experience expert and author presented a couple of provocative theories on market and customer value that should really make brand manufacturers think!</para><para>In technical terms, the coming version 2.0 of eZ Platform was indisputably a major topic of the conference. Expectations are high and the presentations had to prove whether eZ can fulfil them. For partners in particular, the backend can only be adapted and extended by the addition of individual functions with some difficulty in the current version 1.9. However, extensive feedback from partners and customers from the past year has shown that this kind of extension is an absolute necessity for many projects. The manufacturer eZ is now responding to this feedback, and with eZ Platform 2.0, offers improved extensibility for developers and a hybrid mode for many functions. Read\_<link xlink:href=\"http://blog.silversolutions.de/2017/06/ez-events/nachlese-ez-conference-2017/\" xlink:show=\"new\">more in our blog in the detailed report by Frank Dege on the eZ Conference 2017</link>\_(DE).\_</para><para>We wish to thank eZ for its outstanding organisation as well as all speakers for the fascinating food for thought. See you at the next eZ Conference!</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__ez_conference
+        date: 1521590400
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+# news: / Home /  News / Follow-up: Strategy Summit B2B e-Commerce and e-Business
+-
+    type: content
+    mode: create
+    content_type: news
+    parent_location: reference:ref_location_folder_news__home__news
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 5d08d66a3124805669a56f93de97bbb5
+    location_remote_id: 44c089984fed5fd2ed8efea4855a7fff
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Follow-up: Strategy Summit B2B e-Commerce and e-Business'
+        title: 'Follow-up: Strategy Summit B2B e-Commerce and e-Business'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>From November 15 to 16 Berlin based project networks GmbH hosted their second annual Strategy Summit B2B e-Commerce and e-Business. Decision makers and executives from a wide range of industries met to determine their current position in terms of digitisation. The summit is a successful German networking format where e-business, marketing and digitisation managers meet up for in depth 1:1 conversations. Best practice presentations, panel discussions and workshops round out the picture.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Under the headline\_<emphasis role=\"strong\">\"From hype to daily business – Three top trends in B2B e-commerce and how your company can profit\"</emphasis>\_silver.solutions led a well received workshop where participants discussed trend topics like retailer integration, content &amp; commerce and personalisation.\_</para><para>During the summit B2B market places repeatedly came up in conversation and were discussed intensely. Not only during best practice presentations but also in between sessions people were exchanging experiences and opinions about the dos and don'ts of a market place strategy.\_ Our most recent blog post details chances and risks of a market place engagement for B2B companies.\_<link xlink:href=\"http://blog.silversolutions.de/2017/11/ecommerce/marktplaetze-und-b2b/\" xlink:show=\"new\">Visit out blog (DE)</link></para><para>We would like to thank everyone for the interesting conversations and are looking forward to the next Strategy Summit.\_</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__b2b_conference_2018
+        date: 1521504000
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+
+# events / Home / Events
+-
+    type: content
+    mode: create
+    content_type: folder_events
+    parent_location: 2
+    priority: 6
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 1f669b32d9a9a0720737646734c0507e
+    location_remote_id: 1c54583d8528e206c0e26b219443b14e
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: Events
+        title: Events
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        media:
+            destinationContentIds: {  }
+        layout: null
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: 'Meta title'
+        meta_description: 'Meta description'
+        meta_keywords: 'Meta keywords'
+    references:
+          -
+              identifier: ref_location_folder_events__home__events
+              attribute: location_id
+          -
+              identifier: ref_content_folder_events__home__events
+              attribute: content_id
+
+
+# event / Home / events / Fresh and Freeze - Refrigerator Conference
+-
+    type: content
+    mode: create
+    content_type: event
+    parent_location: reference:ref_location_folder_events__home__events
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 4c92f67f0368dc3a629b51a7c685ca8b
+    location_remote_id: 78d075d0f7731cecf302f1d3313081f2
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: null
+        title: 'Fresh and Freeze - Refrigerator Conference'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Fresh and Freeze - Refrigerator Conference is a product show\_and the largest gathering for\_refrigerators enthusiasts\_\_worldwide, bringing together experts in kitchen appliances, and professionals in home decor\_to share, learn and network.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Learn about\_ groundbreaking innovations such as the Ice Defroster 4.7 as well as interior LAD laser lighters. Attendees will receive a rare\_glance to the Alibaba factories. Participants will learn\_ from Alibaba executives what practices they are implementing to improve drastically reduce manufacturing time of refrigerators and how they are innovating the design process.\_</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__fridge_banner
+        start_date: 1521763200
+        end_date: null
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        address: null
+        zipcode: '50672'
+        city: Cologne
+        country: null
+        map_location:
+            latitude: 45.58152
+            longitude: 9.941173
+            address: '50762 Cologne'
+        url: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+# event / Home / events / Silver-eZ Kitchen Roadshow
+-
+    type: content
+    mode: create
+    content_type: event
+    parent_location: reference:ref_location_folder_events__home__events
+    priority: 1
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 45516ede1f148358831240a2229c3f09
+    location_remote_id: 83f9758a7bc9606ec79ca5c5a849c9d9
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Silver-eZ Kitchen Roadshow'
+        title: 'Silver-eZ Kitchen Roadshow'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Whether you are looking to stay up-to-date on the latest kitchen appliances or on the look for a new fridge, the Silver-eZ workshops has you covered. Learn about the latest kitchen design trends.\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Enjoy drinks, food and entertainment at the upcoming 2018 Silver-eZ Industry show. Get a first look at new products such as our highy antiipated Wall-oven and Triple BB Mixer. Speak tto our top designers and engineers who are behind\_\_our groundbreaking . Don't forget to pick up your\_mix it, shake it and drink it kit\_for our Triple B Ninja Blender giveaway.</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__kitchen
+        start_date: 1521763200
+        end_date: null
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        address: 'Färberstraße 26'
+        zipcode: '12555'
+        city: Berlin
+        country: DE
+        map_location:
+            latitude: 52.447469
+            longitude: 13.566937
+            address: 'berlin färberstr. 26'
+        url: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+# event / Home / events / Heat it Up
+-
+    type: content
+    mode: create
+    content_type: event
+    parent_location: reference:ref_location_folder_events__home__events
+    priority: 2
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 90f5e03be96c1e91d6680015d4fdba17
+    location_remote_id: 7ca59b462b526efcfd22d68ecb622693
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Heat it Up'
+        title: 'Microwave: Heat It Up event'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Join us on June 15th, 2018 for our annual \_Heat It Up! Conference.\_ Get a first glimpse to our new microwaves and their powerful features. It is an opportunity for you to\_\_pay with our new products while getting tips on how to heat your food!\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Frozen food has never tasted better.\_ You have chance to hear too leading panelists talk about how\_ to properly heat up food in the microwave. Listen to world-renowned\_microwave engineer, Phillip Heat, about the 2017 innovation of the yer,\_heating sensors and how they are installed in the Skio Microwave. Hear from\_popcorn expert, Matt Fillipo, the 5 steps to heat up popcorn in the microwave.\_</para><para>Dont forgot to enter\_ the Heat it Up, Heat it Up, Heat it Up! Competition. Receive a chance to win roundtrip to microwave Island\_ Resort this summer.\_\_</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__microwave_banner
+        start_date: 1521763200
+        end_date: null
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        address: null
+        zipcode: null
+        city: null
+        country: null
+        map_location:
+            latitude: 52.446442
+            longitude: 13.561497
+            address: ''
+        url: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+
+# folder_blog / Home / Blog
+-
+    type: content
+    mode: create
+    content_type: blog_2
+    parent_location: 2
+    priority: 7
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 11d3e5439f150b6eccb242dbd43a3640
+    location_remote_id: 16582668fc9a431f32c1cddc7e004056
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: Blog
+        title: Blog
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>This is a folder from ContentPlugin</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__kitchen
+        layout: null
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: 'Meta title'
+        meta_description: 'Meta description'
+        meta_keywords: 'Meta keywords'
+    references:
+          -
+              identifier: ref_location_blog__home__blog
+              attribute: location_id
+          -
+              identifier: ref_content_blog__home__blog
+              attribute: content_id
+
+# blog_post / Home / Blog / Mix it up this Summer
+-
+    type: content
+    mode: create
+    content_type: blog_post_2
+    parent_location: reference:ref_location_blog__home__blog
+    priority: 1
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 7a7a61cc16f1099594ab93838e6e4004
+    location_remote_id: 56a280063f33ab5ed32f52dd254cd9f2
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Triple B Ninja Blender'
+        title: 'Mix it up this Summer'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Get into top shape this summer with the Triple B Ninja Blender. Learn delicious recipes you can make in a matter of minutes with this ground-breaking Blender!\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>The Triple B Ninja Blender is extremely powerful and will allow you to live a healthier lifestyle. Don’t miss the chance to make nutritious and delicious smoothies, shakes, sauces and snacks. The blender possesses four functions that make cooking for any chef simpler. The ground-breaking Triple B stainless-steel blades can easily pop out and cleaned in a matter of seconds.</para><para>Check out some quick recipes you can make with the Triple B Ninja Blender:</para><para>Green Tahini Hummus:</para><itemizedlist><listitem><para>2 Tablespoons of Ako Tahini</para></listitem><listitem><para>Half lemon juice</para></listitem><listitem><para>¾ cup water</para></listitem><listitem><para>2 clove garlic</para></listitem><listitem><para>1/8 teaspoon salt</para></listitem><listitem><para>1/8 teaspoon pepper</para></listitem><listitem><para>1 Cilantro</para></listitem><listitem><para>1/2 clove garlic</para></listitem><listitem><para>2 ½ cups of cooked chickpeas</para></listitem></itemizedlist><para>Put all the ingredients in the <link xlink:href=\"http://ezcommerce-demo.ezplatform.com/Product-Catalog/Countertop-Appliances/Mixers/Triple-B-Ninja-Blender\" xlink:show=\"none\" xlink:title=\"\">Triple B Ninja Blender</link> in the following order. Select the medium blend function. Blend it for 30 seconds before opening the lid and adding ¼ cup of water. Then blend for additional one minute. Taste the hummus to see if you need to add more salt or lime juice.</para><para>Just pour the Hummus into bowl and add sliced egg, roasted ¼ cup chickpeas on top with splash of olive oil.</para><eztemplate name=\"product_card_list\"><ezcontent><para>Title for Slider: Buy the products</para><para>Type of product box: Slider</para><para>Sku 1: 5511</para><para>Sku 2: 5518</para><para>Sku 3: 5512</para><para>Sku 4: 5514</para><para>Sku 5:</para></ezcontent><ezconfig><ezvalue key=\"title\">Buy the products</ezvalue><ezvalue key=\"type\">Slider</ezvalue><ezvalue key=\"sku_1\">5511</ezvalue><ezvalue key=\"sku_2\">5518</ezvalue><ezvalue key=\"sku_3\">5512</ezvalue><ezvalue key=\"sku_4\">5514</ezvalue></ezconfig></eztemplate><para>Check our shop for more products.</para><para>\_</para><para>\_</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__hummus_picture
+        date: 1522972800
+        author: 'Amit Gutin'
+        comments_enabled: true
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+# blog_post / Home / Blog / Skio Microwave
+-
+    type: content
+    mode: create
+    content_type: blog_post_2
+    parent_location: reference:ref_location_blog__home__blog
+    priority: 2
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: ed1b4f00c1e3abaee045a4b2ae3fe75d
+    location_remote_id: dc090a615ee4beddc9cd7fe8405e72db
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Skio Microwave'
+        title: 'No Hassle Meal Prep'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Dinner nights are no longer a hassle. Pop in some food to the Skio microwave and get ready to\_ eat an amazing Italian or Indian dinner while watching your favorite TV show on Netflix.</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>The Skio Blue Microwave was named 2017 best microwave of the year according to Microwave Times. Microwaves are not usually associated with providing the best culinary experience. However, Skio’s groundbreaking 4-sided heating system exceptional performance makes sure to your food will taste fresh when heated up.</para><para>The Skio currently comes in two colors: blue and black. It has capacity for two cubic feet and has eleven different heating features. You will be able to heat anything from Italian food left overs to frozen food in a matter of minutes. The microwave is compact and a perfect fit for small spaces.</para><para>Through some popcorn to the microwave and be ready to watch your favorite movie.</para></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__microwave_banner
+        date: 1522972800
+        author: 'Amit Golan'
+        comments_enabled: true
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+    references:
+          -
+              identifier: ref_location_blog_post__home__blog__skio_microwave
+              attribute: location_id
+          -
+              identifier: ref_content_blog_post__home__blog__skio_microwave
+              attribute: content_id
+
+
+# blog_post / Home / Blog / Fresh and Purified Food
+-
+    type: content
+    mode: create
+    content_type: blog_post_2
+    parent_location: reference:ref_location_blog__home__blog
+    priority: 3
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: e2a8ec78b90ff1ce06783c046c839f12
+    location_remote_id: 1a6ada7febf934088dc45d6d34f23eb8
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        internal_name: 'Alibaba Single Door Refrigerator'
+        title: 'Fresh and Purified Food'
+        intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>One size fits all refrigerator for people with limited unit space. The refrigerator\_is renowned for its ground-breaking air-purify technology and design that allows a lot storage space.\_\_</para></section>\n"
+        body:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>The Alibaba Single Door Fridge is perfect for small families living in metropolitan cities. The upper fridge has 10 cubic capacity. It offers drawers which is great for organization. Additionally, the Ultra Freeze temperature management system will allow you to easily monitor how cold your food is. The freezer has also a built-in compartment for ice trays.</para><para>The refrigerator can store a large capacity of food and has 4 side shelves to store different bottles. The fridge also features an air purifier that guarantees to eliminate any bacteria and keep your food fresh. The fridge also features plenty of storage space with four bottom drawers for fruits and vegetables. This is the ultimate fridge for people living in small apartments and needs a lot of storage capacity.</para><para>\_</para><eztemplate name=\"product_card_list\"><ezcontent><para>Title for Slider: Products</para><para>Type of product box: left</para><para>Sku 1: 5510</para><para>Sku 2: 5511</para><para>Sku 3: null</para><para>Sku 4: null</para><para>Sku 5: null</para></ezcontent><ezconfig><ezvalue key=\"title\">Products</ezvalue><ezvalue key=\"type\">left</ezvalue><ezvalue key=\"sku_1\">5510</ezvalue><ezvalue key=\"sku_2\">5511</ezvalue></ezconfig></eztemplate></section>\n"
+        media:
+            destinationContentIds:
+                - reference:ref_content_image__media__images__fridge_banner
+        date: 1522972800
+        author: 'Amit Golan'
+        comments_enabled: true
+        alternative_title: null
+        alternative_intro:
+            content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        alternative_image:
+            destinationContentId: null
+        meta_title: null
+        meta_description: null
+        meta_keywords: null
+
+
+
+
+
+
+
+
+
+
+
+
+# landing pages
+
+-
+    type: content
+    mode: update
+    content_type: landing_page
+    match:
+        location_id: 2
+    priority: 0
+    is_hidden: false
+    sort_field: priority
+    sort_order: ASC
+    remote_id: e535407fb5debd06c810bce3a3847abc
+    location_remote_id: f3e90596361e31d496d4026eb624abc
+    lang: eng-GB
+    section: 1
+    owner: 14
+    always_available: false
+    attributes:
+        name: Home
+        description: 'Homepage of eZ Commerce'
+        page: >-
+            {
+                "layout": "default",
+                "zones": [
+                    {
+                      "id": "192",
+                      "name": "default",
+                      "blocks": [
+                      {
+                          "visible": true,
+                          "id": "757",
+                          "type": "banner",
+                          "name": "Banner",
+                          "view": "default",
+                          "class": null,
+                          "style": ".block-banner {margin-bottom:20px}",
+                          "compiled": "[data-ez-block-id=\"757\"] .block-banner {\n  margin-bottom: 20px; }\n",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_content_image__media__images__banner__the_4_best_products]"
+                          },
+                          {
+                              "id": "",
+                              "name": "url",
+                              "value": "http://www.ez.no"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "758",
+                          "type": "gallery",
+                          "name": "Gallery",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_content_folder__media__images__banner_landing_page]"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "759",
+                          "type": "bestseller",
+                          "name": "Bestsellers",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "productGroupEz",
+                              "value": "117"
+                          },
+                          {
+                              "id": "",
+                              "name": "productGroupEcontent",
+                              "value": "118"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "760",
+                          "type": "product_slider",
+                          "name": "Product Slider",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "name",
+                              "value": "New Products"
+                          },
+                          {
+                              "id": "",
+                              "name": "skulist",
+                              "value": "[{\"sku\":\"5518\",\"name\":\"5518 - Triple BB Food Mixer\"},{\"sku\":\"5527\",\"name\":\"5527 - Jameson Cutting Board\"},{\"sku\":\"5533\",\"name\":\"5533 - Pasta Server\"},{\"sku\":\"5521\",\"name\":\"5521 - Slow Cooker\"}]"
+                          },
+                          {
+                              "id": "",
+                              "name": "name_tab2",
+                              "value": "Sale"
+                          },
+                          {
+                              "id": "",
+                              "name": "skulist_tab2",
+                              "value": "[{\"sku\":\"5526\",\"name\":\"5526 - Tifex Roasting Pan\"},{\"sku\":\"5528\",\"name\":\"5528 - Tokumu Knife Set\"},{\"sku\":\"5525\",\"name\":\"5525 - Tifex Frying Pans\"}]"
+                          },
+                          {
+                              "id": "",
+                              "name": "name_tab3",
+                              "value": "Offers"
+                          },
+                          {
+                              "id": "",
+                              "name": "skulist_tab3",
+                              "value": "[{\"sku\":\"5521\",\"name\":\"5521 - Slow Cooker\"},{\"sku\":\"5523\",\"name\":\"5523 - Eco B Pasta Maker\"}]"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "761",
+                          "type": "embed",
+                          "name": "Embed",
+                          "view": "embed",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_content_article__home__article__kitchen_of_the_future]"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "762",
+                          "type": "rss",
+                          "name": "RSS",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "url",
+                              "value": "https://blog.kitchenaid.com/feed/"
+                          },
+                          {
+                              "id": "",
+                              "name": "limit",
+                              "value": "3"
+                          },
+                          {
+                              "id": "",
+                              "name": "offset",
+                              "value": "0"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "763",
+                          "type": "embed",
+                          "name": "Embed",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_content_image__media__images__banner__pulley_h]"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "764",
+                          "type": "contentlist",
+                          "name": "Content List",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_location_folder_news__home__news]"
+                          },
+                          {
+                              "id": "",
+                              "name": "limit",
+                              "value": "3"
+                          },
+                          {
+                              "id": "",
+                              "name": "contentType",
+                              "value": "article"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "765",
+                          "type": "embed",
+                          "name": "Embed",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_content_blog_post__home__blog__skio_microwave]"
+                          }
+                          ]
+                      },
+                      {
+                          "visible": true,
+                          "id": "766",
+                          "type": "embed",
+                          "name": "Embed",
+                          "view": "default",
+                          "class": null,
+                          "style": null,
+                          "compiled": "",
+                          "since": null,
+                          "till": null,
+                          "attributes": [
+                          {
+                              "id": "",
+                              "name": "contentId",
+                              "value": "[reference:ref_content_image__media__images__eco_e_toaster_banner]"
+                          }
+                          ]
+                      }
+                      ]
+                    }
+                ]
+            }
+
+
