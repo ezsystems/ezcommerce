@@ -6,7 +6,6 @@ imports:
     - { resource: env/generic.php }
     - { resource: env/platformsh.php }
     - { resource: services.yml }
-    - { resource: services/ }
     - { resource: ecommerce.yml }
     - { resource: ecommerce_parameters.yml }
 

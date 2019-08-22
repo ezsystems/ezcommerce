@@ -30,7 +30,6 @@
     },
     "require": {
         "php": "^7.1.3",
-        "cweagans/composer-patches": "~1.0",
         "doctrine/doctrine-bundle": "^1.9.1",
         "doctrine/orm": "^2.6.3",
         "ezsystems/date-based-publisher": "~3.2.1",
@@ -148,8 +147,6 @@
         }
     },
     "extra": {
-        "patches-file": "migrations/patches_tmp/composer.patches.json",
-        "composer-exit-on-patch-failure": true,
         "ez-install-name": "eZ Commerce",
         "ez-install-command": [
             "bash install-solr.sh",
@@ -166,7 +163,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "3.0.x-dev"
+            "dev-master": "2.5.x-dev"
         }
     }
 }
