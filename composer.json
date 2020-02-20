@@ -44,7 +44,7 @@
         "ezsystems/ezplatform-ee-installer": "~2.5.0",
         "ezsystems/ezplatform-form-builder": "~1.2.1",
         "ezsystems/ezplatform-graphql": "~1.0.1",
-        "ezsystems/ezplatform-http-cache": "~0.9.0",
+        "ezsystems/ezplatform-http-cache": "~1.0.0",
         "ezsystems/ezplatform-http-cache-fastly": "~1.1.3",
         "ezsystems/ezplatform-matrix-fieldtype": "~1.0.1",
         "ezsystems/ezplatform-page-builder": "~1.3.1",

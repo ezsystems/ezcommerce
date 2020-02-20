@@ -16,7 +16,7 @@
 - Request an online demo on [ez.no](https://ez.no/Products/eZ-Commerce)
 - As a partner, request a trial versions true your sales representative.
 - As a customer _with_ an eZ Commerce subscription, get full version from [Service Portal](https://support.ez.no/Downloads).
-  Or by setting up [Composer Authentication Tokens](https://doc.ez.no/display/DEVELOPER/Using+Composer) for use in combination with this repository.
+  Or by setting up [Composer Authentication Tokens](https://doc.ezplatform.com/en/2.5/getting_started/install_ez_enterprise/#set-up-authentication-tokens) for use in combination with this repository.
 
 ### How to install 
 
