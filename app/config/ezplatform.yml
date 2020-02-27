@@ -19,7 +19,7 @@ ezpublish:
           - site
           - admin
         groups:
-            site_group: [ import, site]
+            site_group: [import, site]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
@@ -34,6 +34,7 @@ ezpublish:
     #      on single-site you can place shared config under "default" for simplicity as shown below.
     system:
         default:
+            pagelayout: "SilversolutionsEshopBundle::pagelayout.html.twig"
             languages: [eng-GB]
             # Cache pool service, needs to be different per repository (database) on multi repository install.
             cache_service_name: '%cache_pool%'
@@ -76,6 +77,9 @@ ezpublish:
                     - 43 # Media
                     - 48 # Setup
                     - 55 # Forms
+            subtree_paths:
+                content: /1/2/
+                media: /1/43/
 
         site:
             languages: [eng-GB]

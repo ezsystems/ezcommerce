@@ -1,19 +1,10 @@
 # common parts
 parameters:
     siso_search.de.facet_position: left
-    siso_search.en.facet_position: left
 
     siso_core.de.standard_price_factory.fallback_currency: EUR
-    siso_core.en.standard_price_factory.fallback_currency: EUR
 
     siso_core.default.automatic_currency_conversion: true
-    siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
-    siso_price.default.price_export.product_type_filter: [ses_product]
-    siso_core.default.breadcrumb_content_label_fields: ['name', 'title']
-
-    siso_search.de.facet_position: left
-    siso_search.en.facet_position: left
-
     siso_core.default.user_menu_bundles: ['SilversolutionsEshopBundle','SisoOrderHistoryBundle']
     siso_price.default.price_export.product_type_filter: [ses_product]
     siso_core.default.breadcrumb_content_label_fields: ['name', 'title']
@@ -46,7 +37,7 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     form_themes:
-        - 'bootstrap_3_layout.html.twig'
+        - 'bootstrap_4_layout.html.twig'
         - 'SilversolutionsEshopBundle:Forms:form_div_layout.html.twig'
 
 ezpublish:

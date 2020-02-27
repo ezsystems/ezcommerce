@@ -36,6 +36,11 @@ foreach ($relationships['database'] as $endpoint) {
     $container->setParameter('cluster_database_name', 'cluster');
 }
 
+// If mailer_host has default value, then set it to platform.sh' default instead
+if ($container->getParameter('mailer_host') === '127.0.0.1') {
+    $container->setParameter('mailer_host', getenv('PLATFORM_SMTP_HOST'));
+}
+
 // PLATFORMSH_DFS_NFS_PATH is different compared to DFS_NFS_PATH in the sense that it is relative to ezplatform dir
 // DFS_NFS_PATH is an absolute path
 if ($dfsNfsPath = getenv('PLATFORMSH_DFS_NFS_PATH')) {
@@ -160,4 +165,10 @@ if ($route !== null && !getenv('HTTPCACHE_PURGE_TYPE')) {
 // Setting default value for HTTPCACHE_VARNISH_INVALIDATE_TOKEN if it is not explicitly set
 if (!getenv('HTTPCACHE_VARNISH_INVALIDATE_TOKEN')) {
     $container->setParameter('varnish_invalidate_token', getenv('PLATFORM_PROJECT_ENTROPY'));
+}
+
+// Adapt config based on enabled PHP extensions
+// Get imagine to use imagick if enabled, to avoid using php memory for image convertions
+if (extension_loaded('imagick')) {
+    $container->setParameter('liip_imagine_driver', 'imagick');
 }

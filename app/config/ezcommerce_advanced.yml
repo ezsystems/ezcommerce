@@ -1,12 +1,18 @@
 parameters:
 
-    siso_core.default.logo_image: /bundles/silversolutionseshop/img/logo-advanced.png
-    siso_core.admin.logo_image: /bundles/silversolutionseshop/img/logo-advanced.png
+    siso_core.default.logo_image: /bundles/silversolutionseshop/img/logo.png
+    siso_core.admin.logo_image: /bundles/silversolutionseshop/img/logo.png
     siso_core.default.invoice_logo: /bundles/silversolutionseshop/img/invoice_logo.png
-    siso_core.default.email_header: /bundles/silversolutionseshop/img/email-header.png
+    siso_core.default.email_header: /bundles/silversolutionseshop/img/email-header-advanced.png
 
-    siso_local_order_management.default.send_order_to_erp: true
-    siso_order_history.default.use_local_documents: false
+
+    siso_core.default.erp_connection: false
+    siso_local_order_management.default.send_order_to_erp: false
+    siso_order_history.default.use_local_documents: true
+
+    # please set in backend configsection using the ERP URL for your ERP
+    siso_erp.default.web_connector.service_location: 'http://mydomain.com/mywebconnector'
+    siso_erp.web_connector.service_location: 'http://mydomain.com/mywebconnector'
 
 nelmio_solarium:
     endpoints:
