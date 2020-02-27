@@ -1,0 +1,53 @@
+
+# Commerce routes
+
+# This file is auto-generated during the composer install
+silversolutions_eshop:
+    resource: "@SilversolutionsEshopBundle/Resources/config/ses_routing.yml"
+    prefix: /
+silversolutions_datatypes:
+    resource: '@SilversolutionsDatatypesBundle/Resources/config/routing.yml'
+    prefix: /
+silversolutions_tools:
+    resource: '@SilversolutionsToolsBundle/Resources/config/routing.yml'
+    prefix: /
+silversolutions_translation:
+    resource: '@SilversolutionsTranslationBundle/Resources/config/routing.yml'
+    prefix: /
+
+siso_checkout:
+    resource: '@SisoCheckoutBundle/Resources/config/routing.yml'
+    prefix: /
+siso_comparison:
+    resource: '@SisoComparisonBundle/Resources/config/routing.yml'
+    prefix: /
+siso_quick_order:
+    resource: '@SisoQuickOrderBundle/Resources/config/routing.yml'
+    prefix: /
+siso_search:
+    resource: '@SisoSearchBundle/Resources/config/routing.yml'
+    prefix: /
+siso_tools:
+    resource: '@SisoToolsBundle/Resources/config/routing.yml'
+    prefix: /
+#siso_voucher:
+#    resource: "@SisoVoucherBundle/Resources/config/routing.yml"
+#    prefix: /
+siso_shop_price_engine:
+    resource: "@ShopPriceEnginePluginBundle/Resources/config/routing.yml"
+    prefix: /
+    #_siso_payment:
+    #resource: '@SisoPaymentBundle/Resources/config/routing.yml'
+    #_siso_paypal_payment:
+    #resource: '@SisoPaypalPaymentBundle/Resources/config/routing.yml'
+siso_orderhistory:
+    resource: '@SisoOrderHistoryBundle/Resources/config/routing.yml'
+    prefix: /
+
+siso_erp:
+    resource: "@SisoAdminErpPluginBundle/Resources/config/routing.yml"
+    prefix: /
+
+silver_eshop_rest_api:
+    resource: "@SilversolutionsEshopBundle/Resources/config/routing_rest.yml"
+    prefix:   '%ezpublish_rest.path_prefix%'
