@@ -61,7 +61,7 @@ return [
     EzSystems\EzPlatformCalendarBundle\EzPlatformCalendarBundle::class => ['all' => true],
     EzSystems\EzPlatformGraphQL\EzSystemsEzPlatformGraphQLBundle::class => ['all' => true],
     EzSystems\EzPlatformQueryFieldType\Symfony\EzSystemsEzPlatformQueryFieldTypeBundle::class => ['all' => true],
-    EzSystems\EzPlatformContentComparisonBundle\EzPlatformContentComparisonBundle::class => ['all' => true],
+    EzSystems\EzPlatformVersionComparisonBundle\EzPlatformVersionComparisonBundle::class => ['all' => true],
     // eZ Commerce
     FOS\CommentBundle\FOSCommentBundle::class => ['all' => true],
     Tedivm\StashBundle\TedivmStashBundle::class => ['all' => true],
