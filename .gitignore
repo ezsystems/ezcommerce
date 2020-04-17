@@ -52,6 +52,8 @@
 
 .php~
 
+/config/graphql/
+
 /doc/docker/entrypoint/*/*.sql
 /dfsdata
 
@@ -84,9 +86,6 @@ ide-twig.json
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-###> symfony/web-server-bundle ###
-/.web-server-pid
-###< symfony/web-server-bundle ###
 
 ###> liip/imagine-bundle ###
 /public/media/cache/
@@ -98,11 +97,6 @@ ide-twig.json
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
-
-###> behat/symfony2-extension ###
-behat.yml
-###< behat/symfony2-extension ###
-
 ###> symfony/phpunit-bridge ###
 .phpunit
 /phpunit.xml
@@ -112,6 +106,10 @@ behat.yml
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+###> friends-of-behat/symfony-extension ###
+/behat.yml
+###< friends-of-behat/symfony-extension ###
 
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/*.pem
