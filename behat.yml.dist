@@ -16,6 +16,7 @@ default:
                 capabilities:
                     extra_capabilities:
                         chromeOptions:
+                            w3c: false
                             args:
                                 - "--window-size=1440,1080"
                                 - "--no-sandbox"
@@ -44,7 +45,8 @@ default:
                     mode: normal
                     limit: 10
 
-        Allure\Behat\AllureFormatterExtension: ~
+        Allure\Behat\AllureFormatterExtension:
+            image_attachment_limit: 5
 
     suites: ~
 
