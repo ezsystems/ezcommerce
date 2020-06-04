@@ -58,13 +58,11 @@ return [
     EzSystems\EzPlatformQueryFieldType\Symfony\EzSystemsEzPlatformQueryFieldTypeBundle::class => ['all' => true],
     EzSystems\EzPlatformVersionComparisonBundle\EzPlatformVersionComparisonBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\SearchBundle\PlatformSearchBundle::class => ['all' => true],
-    // eZ Commerce
     FOS\CommentBundle\FOSCommentBundle::class => ['all' => true],
     Tedivm\StashBundle\TedivmStashBundle::class => ['all' => true],
     WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle::class => ['all' => true],
     Nelmio\SolariumBundle\NelmioSolariumBundle::class => ['all' => true],
     JMS\Payment\CoreBundle\JMSPaymentCoreBundle::class => ['all' => true],
-//    JMS\Payment\PaypalBundle\JMSPaymentPaypalBundle::class => ['all' => true],
     Joli\ApacheTikaBundle\ApacheTikaBundle::class => ['all' => true],
     Siso\Bundle\OneSkyBundle\OneSkyBundle::class => ['all' => true],
     Silversolutions\Bundle\EshopBundle\SilversolutionsEshopBundle::class => ['all' => true],
@@ -75,8 +73,7 @@ return [
     Siso\Bundle\CheckoutBundle\SisoCheckoutBundle::class => ['all' => true],
     Siso\Bundle\ComparisonBundle\SisoComparisonBundle::class => ['all' => true],
     Siso\Bundle\PaymentBundle\SisoPaymentBundle::class => ['all' => true],
-//    Siso\Bundle\PaypalPaymentBundle\SisoPaypalPaymentBundle::class => ['all' => true],
-    Kaliop\eZMigrationBundle\EzMigrationBundle::class => ['all' => true],
+    Kaliop\eZMigrationBundle\eZMigrationBundle::class => ['all' => true],
     Siso\Bundle\PriceBundle\SisoPriceBundle::class => ['all' => true],
     Siso\Bundle\QuickOrderBundle\SisoQuickOrderBundle::class => ['all' => true],
     Siso\Bundle\ToolsBundle\SisoToolsBundle::class => ['all' => true],
@@ -94,7 +91,6 @@ return [
     Siso\AdminErpPluginBundle\SisoAdminErpPluginBundle::class => ['all' => true],
     Siso\Bundle\InstallerBundle\SisoInstallerBundle::class => ['all' => true],
     FOS\RestBundle\FOSRestBundle::class => ['all' => true],
-    // GraphQL bundles have to be loaded after EzSystemsEzPlatformGraphQLBundle
     Overblog\GraphQLBundle\OverblogGraphQLBundle::class => ['all' => true],
     Overblog\GraphiQLBundle\OverblogGraphiQLBundle::class => ['dev' => true],
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
@@ -102,4 +98,5 @@ return [
     FriendsOfBehat\SymfonyExtension\Bundle\FriendsOfBehatSymfonyExtensionBundle::class => ['test' => true, 'behat' => true],
     Hautelook\TemplatedUriBundle\HautelookTemplatedUriBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\ElasticSearchEngine\PlatformElasticSearchEngineBundle::class => ['all' => true],
+    Ibexa\Commerce\Bundle\AdminUiBundle\IbexaCommerceAdminUiBundle::class => ['all' => true],
 ];
