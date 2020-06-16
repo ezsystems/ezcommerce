@@ -57,6 +57,7 @@ return [
     EzSystems\EzPlatformGraphQL\EzSystemsEzPlatformGraphQLBundle::class => ['all' => true],
     EzSystems\EzPlatformQueryFieldType\Symfony\EzSystemsEzPlatformQueryFieldTypeBundle::class => ['all' => true],
     EzSystems\EzPlatformVersionComparisonBundle\EzPlatformVersionComparisonBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\SearchBundle\PlatformSearchBundle::class => ['all' => true],
     // eZ Commerce
     FOS\CommentBundle\FOSCommentBundle::class => ['all' => true],
     Tedivm\StashBundle\TedivmStashBundle::class => ['all' => true],
