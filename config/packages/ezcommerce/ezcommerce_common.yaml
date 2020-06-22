@@ -38,7 +38,7 @@ twig:
     strict_variables: '%kernel.debug%'
     form_themes:
         - 'bootstrap_4_layout.html.twig'
-        - 'SilversolutionsEshopBundle:Forms:form_div_layout.html.twig'
+        - '@SilversolutionsEshop/Forms/form_div_layout.html.twig'
 
 ezpublish:
     imagemagick:

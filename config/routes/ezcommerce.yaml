@@ -49,5 +49,5 @@ siso_erp:
     prefix: /
 
 silver_eshop_rest_api:
-    resource: "@SilversolutionsEshopBundle/Resources/config/routing_rest.yml"
+    resource: '@SilversolutionsEshopBundle/Resources/config/routing_rest.yml'
     prefix:   '%ezpublish_rest.path_prefix%'
