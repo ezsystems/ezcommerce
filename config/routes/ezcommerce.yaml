@@ -33,9 +33,6 @@ siso_tools:
 #siso_voucher:
 #    resource: "@SisoVoucherBundle/Resources/config/routing.yml"
 #    prefix: /
-siso_shop_price_engine:
-    resource: "@ShopPriceEnginePluginBundle/Resources/config/routing.yml"
-    prefix: /
     #_siso_payment:
     #resource: '@SisoPaymentBundle/Resources/config/routing.yml'
     #_siso_paypal_payment:
@@ -44,10 +41,9 @@ siso_orderhistory:
     resource: '@SisoOrderHistoryBundle/Resources/config/routing.yml'
     prefix: /
 
-siso_erp:
-    resource: "@SisoAdminErpPluginBundle/Resources/config/routing.yml"
-    prefix: /
-
 silver_eshop_rest_api:
     resource: '@SilversolutionsEshopBundle/Resources/config/routing_rest.yml'
     prefix:   '%ezpublish_rest.path_prefix%'
+
+ezcommerce_admin_ui:
+    resource: '@IbexaCommerceAdminUiBundle/Resources/config/routing.yaml'
