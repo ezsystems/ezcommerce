@@ -66,7 +66,6 @@ return [
     Joli\ApacheTikaBundle\ApacheTikaBundle::class => ['all' => true],
     Siso\Bundle\OneSkyBundle\OneSkyBundle::class => ['all' => true],
     Silversolutions\Bundle\EshopBundle\SilversolutionsEshopBundle::class => ['all' => true],
-    Silversolutions\Bundle\DatatypesBundle\SilversolutionsDatatypesBundle::class => ['all' => true],
     Silversolutions\Bundle\ToolsBundle\SilversolutionsToolsBundle::class => ['all' => true],
     Silversolutions\Bundle\TranslationBundle\SilversolutionsTranslationBundle::class => ['all' => true],
     Siso\Bundle\EzStudioBundle\SisoEzStudioBundle::class => ['all' => true],
@@ -101,4 +100,5 @@ return [
     Ibexa\Commerce\Bundle\AdminUiBundle\IbexaCommerceAdminUiBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Commerce\PageBuilder\IbexaPlatformCommercePageBuilderBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Permissions\PlatformPermissionsBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\FieldTypes\IbexaPlatformCommerceFieldTypesBundle::class => ['all' => true],
 ];

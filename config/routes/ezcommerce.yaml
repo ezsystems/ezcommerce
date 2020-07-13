@@ -5,9 +5,6 @@
 silversolutions_eshop:
     resource: "@SilversolutionsEshopBundle/Resources/config/ses_routing.yml"
     prefix: /
-silversolutions_datatypes:
-    resource: '@SilversolutionsDatatypesBundle/Resources/config/routing.yml'
-    prefix: /
 silversolutions_tools:
     resource: '@SilversolutionsToolsBundle/Resources/config/routing.yml'
     prefix: /
