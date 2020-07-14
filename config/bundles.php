@@ -100,4 +100,5 @@ return [
     Ibexa\Platform\Bundle\ElasticSearchEngine\PlatformElasticSearchEngineBundle::class => ['all' => true],
     Ibexa\Commerce\Bundle\AdminUiBundle\IbexaCommerceAdminUiBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Commerce\PageBuilder\IbexaPlatformCommercePageBuilderBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Permissions\PlatformPermissionsBundle::class => ['all' => true],
 ];
