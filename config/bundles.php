@@ -83,7 +83,6 @@ return [
     JMS\JobQueueBundle\JMSJobQueueBundle::class => ['all' => true],
     Siso\Bundle\LocalOrderManagementBundle\SisoLocalOrderManagementBundle::class => ['all' => true],
     Siso\Bundle\NewsletterBundle\SisoNewsletterBundle::class => ['all' => true],
-    Siso\Bundle\VariantTypeBundle\SisoVariantTypeBundle::class => ['all' => true],
     Siso\Bundle\SpecificationsTypeBundle\SisoSpecificationsTypeBundle::class => ['all' => true],
     Siso\Bundle\ContentPluginBundle\SisoContentPluginBundle::class => ['all' => true],
     Siso\Bundle\OrderHistoryBundle\SisoOrderHistoryBundle::class => ['all' => true],
