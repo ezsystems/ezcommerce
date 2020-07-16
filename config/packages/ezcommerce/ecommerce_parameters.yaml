@@ -16,7 +16,6 @@ parameters:
     siso_core.default.user_group_location.private: 388
     siso_core.default.product_catalog_content_type_id: 45
 
-    siso_imagemagick_path: /usr/bin/convert
     siso_core.siteaccess_group: ezdemo_site_clean_group
     apache_tika_path: '%kernel.project_dir%/bin/tika-app-1.20.jar'
 

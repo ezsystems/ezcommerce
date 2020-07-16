@@ -40,11 +40,6 @@ twig:
         - 'bootstrap_4_layout.html.twig'
         - '@SilversolutionsEshop/Forms/form_div_layout.html.twig'
 
-ezpublish:
-    imagemagick:
-        enabled: true
-        path: '%siso_imagemagick_path%'
-
 jms_payment_core:
     encryption:
         provider: defuse_php_encryption
