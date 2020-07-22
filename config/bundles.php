@@ -100,4 +100,5 @@ return [
     Ibexa\Platform\Bundle\Commerce\PageBuilder\IbexaPlatformCommercePageBuilderBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Permissions\PlatformPermissionsBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Commerce\FieldTypes\IbexaPlatformCommerceFieldTypesBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\ShopUi\IbexaPlatformCommerceShopUiBundle::class => ['all' => true],
 ];
