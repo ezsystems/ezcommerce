@@ -32,6 +32,7 @@
         "ezsystems/ezcommerce-page-builder": "^1.1@dev",
         "ezsystems/ezcommerce-price-engine": "^3.2@dev",
         "ezsystems/ezcommerce-shop": "^3.2@dev",
+        "ezsystems/ezcommerce-shop-ui": "^1.0@dev",
         "ezsystems/ezmigrationbundle": "^1.0@dev",
         "ezsystems/ezplatform-admin-ui": "^2.2@dev",
         "ezsystems/ezplatform-admin-ui-assets": "~5.1.0@beta",
