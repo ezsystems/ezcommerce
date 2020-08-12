@@ -11,6 +11,7 @@ services:
      - db
     environment:
      - COMPOSER_MEMORY_LIMIT
+     - ENABLE_XDEBUG
      - EZPLATFORM_SITEACCESS
      - PHP_INI_ENV_memory_limit
      - SYMFONY_ENV=${SYMFONY_ENV-dev}
@@ -29,6 +30,7 @@ services:
      - FASTLY_SERVICE_ID
      - FASTLY_KEY
      - SISO_SEARCH_SOLR_HOST
+     - XDEBUG_CONFIG
     networks:
      - backend
 
