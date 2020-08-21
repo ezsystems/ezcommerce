@@ -101,4 +101,9 @@ return [
     Ibexa\Platform\Bundle\Permissions\PlatformPermissionsBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Commerce\FieldTypes\IbexaPlatformCommerceFieldTypesBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Commerce\ShopUi\IbexaPlatformCommerceShopUiBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\Product\IbexaPlatformCommerceProductBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\BusinessEditionBaseDesign\IbexaPlatformCommerceBusinessEditionBaseDesignBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\ContentEditionBaseDesign\IbexaPlatformCommerceContentEditionBaseDesignBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\Basket\IbexaPlatformCommerceBasketBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\Checkout\IbexaPlatformCommerceCheckoutBundle::class => ['all' => true],
 ];

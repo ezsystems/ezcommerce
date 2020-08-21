@@ -12,7 +12,10 @@
     ],
     "repositories": [
         { "type": "composer", "url": "https://updates.ez.no/ttl" },
-        { "type": "composer", "url": "https://updates.ez.no/ttl_com" }
+        { "type": "composer", "url": "https://updates.ez.no/ttl_com" },
+        { "type": "vcs", "url": "git@github.com:ezsystems/ezcommerce-edition-content.git" },
+        { "type": "vcs", "url": "git@github.com:ezsystems/ezcommerce-edition-engagement.git" },
+        { "type": "vcs", "url": "git@github.com:ezsystems/ezcommerce-edition-business.git" }
     ],
     "require": {
         "php": "^7.3",
@@ -33,6 +36,9 @@
         "ezsystems/ezcommerce-price-engine": "^3.2@dev",
         "ezsystems/ezcommerce-shop": "^3.2@dev",
         "ezsystems/ezcommerce-shop-ui": "^1.0@dev",
+        "ezsystems/ezcommerce-edition-content": "^1.0@dev",
+        "ezsystems/ezcommerce-edition-engagement": "^1.0@dev",
+        "ezsystems/ezcommerce-edition-business": "^1.0@dev",
         "ezsystems/ezmigrationbundle": "^1.0@dev",
         "ezsystems/ezplatform-admin-ui": "^2.2@dev",
         "ezsystems/ezplatform-admin-ui-assets": "~5.1.0@beta",
