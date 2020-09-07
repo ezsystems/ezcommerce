@@ -19,17 +19,6 @@ parameters:
         additional_fields: ['intro', 'media', 'alternative_title', 'alternative_intro', 'alternative_image']
     silver_eshop.default.path_prefix_seo: ''
 
-ez_search_engine_solr:
-    endpoints:
-        endpoint0:
-            dsn: '%env(SOLR_DSN)%'
-            core: '%env(SOLR_CORE)%'
-    connections:
-        default:
-            entry_endpoints:
-                - endpoint0
-            mapping:
-                default: endpoint0
 apache_tika:
     path: '%apache_tika_path%'
 
