@@ -8,7 +8,8 @@ parameters:
 ez_search_engine_solr:
     endpoints:
         endpoint0:
-            dsn: '%solr_dsn%'
+            # suffixed explicitly for compatibility with SolariumBundle used by Commerce
+            dsn: '%solr_dsn%/solr'
             core: '%solr_core%'
     connections:
         default:
