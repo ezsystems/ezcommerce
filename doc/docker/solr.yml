@@ -14,7 +14,7 @@ services:
      - solr
     environment:
      - SEARCH_ENGINE=solr
-     - SOLR_DSN=http://solr:8983/solr
+     - SOLR_DSN=http://solr:8983
 
   solr:
     build:
