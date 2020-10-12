@@ -3,8 +3,14 @@ if [ $# -gt 0 ]; then
     PORT=$1
 fi
 
-wget https://archive.apache.org/dist/tika/tika-app-1.20.jar -O bin/tika-app-1.20.jar
-wget https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz -O solr-7.7.3.tgz
+if [ ! -f bin/tika-app-1.20.jar ]; then
+  wget https://archive.apache.org/dist/tika/tika-app-1.20.jar -O bin/tika-app-1.20.jar
+fi
+
+if [ ! -f solr-7.7.3.tgz ]; then
+  wget https://archive.apache.org/dist/lucene/solr/7.7.3/solr-7.7.3.tgz -O solr-7.7.3.tgz
+fi
+
 tar xfz solr-7.7.3.tgz
 mv solr-7.7.3 solr
 cd solr
