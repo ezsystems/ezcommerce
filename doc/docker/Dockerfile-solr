@@ -1,26 +1,20 @@
-FROM solr:6-alpine
+FROM solr:7.7-alpine
 
 ARG SOLR_PORT=8983
 
 # Copy solr config from the version used by eZ Platform
-COPY vendor/ezsystems/ezplatform-solr-search-engine/lib/Resources/config/solr/ /opt/solr/server/tmp
+COPY --chown=solr:solr ./migrations/solr/ /opt/solr/server/solr/configsets/ez
 
 # Prepare config
-RUN mkdir -p /opt/solr/server/ez/template \
- && cp -R /opt/solr/server/tmp/* /opt/solr/server/ez/template \
- && cp /opt/solr/server/solr/configsets/basic_configs/conf/currency.xml /opt/solr/server/ez/template \
- && cp /opt/solr/server/solr/configsets/basic_configs/conf/solrconfig.xml /opt/solr/server/ez/template \
- && cp /opt/solr/server/solr/configsets/basic_configs/conf/stopwords.txt /opt/solr/server/ez/template \
- && cp /opt/solr/server/solr/configsets/basic_configs/conf/synonyms.txt /opt/solr/server/ez/template \
- && cp /opt/solr/server/solr/configsets/basic_configs/conf/elevate.xml /opt/solr/server/ez/template \
- && cp /opt/solr/server/solr/solr.xml /opt/solr/server/ez \
- && sed -i.bak '/<updateRequestProcessorChain name="add-unknown-fields-to-the-schema">/,/<\/updateRequestProcessorChain>/d' /opt/solr/server/ez/template/solrconfig.xml \
- && sed -ie 's/${solr.autoSoftCommit.maxTime:-1}/${solr.autoSoftCommit.maxTime:20}/' /opt/solr/server/ez/template/solrconfig.xml
+RUN cp -R /opt/solr/server/solr/configsets/_default/conf/lang /opt/solr/server/solr/configsets/ez \
+ && cp /opt/solr/server/solr/configsets/_default/conf/solrconfig.xml /opt/solr/server/solr/configsets/ez \
+ && cp /opt/solr/server/solr/configsets/_default/conf/stopwords.txt /opt/solr/server/solr/configsets/ez \
+ && cp /opt/solr/server/solr/configsets/_default/conf/synonyms.txt /opt/solr/server/solr/configsets/ez \
+ && cp /opt/solr/example/example-DIH/solr/solr/conf/currency.xml /opt/solr/server/solr/configsets/ez \
+ && cp /opt/solr/server/solr/solr.xml /opt/solr/server/solr/configsets/ez \
+ && sed -i.bak '/<updateRequestProcessorChain name="add-unknown-fields-to-the-schema">/,/<\/updateRequestProcessorChain>/d' /opt/solr/server/solr/configsets/ez/solrconfig.xml \
+ && sed -ie 's/${solr.autoSoftCommit.maxTime:-1}/${solr.autoSoftCommit.maxTime:20}/' /opt/solr/server/solr/configsets/ez/solrconfig.xml
 
-# Set our core config as home
-ENV SOLR_HOME /opt/solr/server/ez
-
-RUN bin/solr -s ez -p $SOLR_PORT \
- && bin/solr create_core -c collection1 -d server/ez/template -p $SOLR_PORT \
- && bin/solr create_core -c econtent -d server/ez/template -p $SOLR_PORT \
- && bin/solr create_core -c econtent_back -d server/ez/template -p $SOLR_PORT
+RUN precreate-core collection1 /opt/solr/server/solr/configsets/ez \
+ && precreate-core econtent /opt/solr/server/solr/configsets/ez \
+ && precreate-core econtent_back /opt/solr/server/solr/configsets/ez
