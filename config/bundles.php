@@ -58,6 +58,7 @@ return [
     EzSystems\EzPlatformQueryFieldType\Symfony\EzSystemsEzPlatformQueryFieldTypeBundle::class => ['all' => true],
     EzSystems\EzPlatformVersionComparisonBundle\EzPlatformVersionComparisonBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Search\IbexaPlatformSearchBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Assets\IbexaPlatformAssetsBundle::class => ['all' => true],
     FOS\CommentBundle\FOSCommentBundle::class => ['all' => true],
     Tedivm\StashBundle\TedivmStashBundle::class => ['all' => true],
     WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle::class => ['all' => true],
