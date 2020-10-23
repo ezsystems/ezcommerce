@@ -10,7 +10,7 @@ parameters:
     ses_eshop.order.sales_contact: shop@silversolutions.de
     ses_eshop.lostorder_email: shop@silversolutions.de
     siso_paypal_payment.receiver_email: shop@silver.de
-    silver_tools.default.translationFolderId: 61 # root (1) / Components (59) / Textmodules (61)
+    silver_tools.default.translationFolderId: 62 # root (1) / Components (60) / Textmodules (62)
     siso_core.default.user_group_location: 106
     siso_core.default.user_group_location.business: 385
     siso_core.default.user_group_location.private: 388
