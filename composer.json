@@ -160,9 +160,9 @@
             "@auto-scripts"
         ],
         "ezplatform-install": [
-            "@php bin/console ezplatform:install ezplatform-ee-clean",
-            "@php bin/console ezplatform:install ezcommerce-clean",
-            "@php bin/console ezplatform:graphql:generate-schema"
+            "@php bin/console --ansi ezplatform:install ezplatform-ee-clean",
+            "@php bin/console --ansi ezplatform:install ezcommerce-clean",
+            "@php bin/console --ansi ezplatform:graphql:generate-schema"
         ],
         "ezcommerce-install": [
             "@ezplatform-install"
