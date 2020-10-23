@@ -6,7 +6,7 @@
 ## What is Ibexa Commerce?
 *Ibexa Commerce* is commercial Digital Experience Platform (DXP) software developed by Ibexa.
 
-*Ibexa Commerce* derives from *[Ibexa Experience](https://github.com/ezsystems/ezplatform-ee)*. It is composed of a set of bundles. Ibexa Commerce, like Ibexa Experience, is built on top of the Symfony framework (Full Stack). It has been in development since 2014.
+*Ibexa Commerce* derives from *[Ibexa Experience](https://github.com/ezsystems/ezplatform-ee)*. It is composed of a set of bundles. Ibexa Commerce, like Ibexa Experience, is built on top of the Symfony framework (Full Stack).
 
 ### How to get access to Ibexa Commerce?
 
@@ -23,6 +23,8 @@ Ibexa Platform is 100% open source and is the foundation for the commercial *Ibe
 - Ibexa (commercial products and services): [ibexa.co](https://ibexa.co/)
 
 ## Installation
+Installation instructions below are for installing a clean installation of Ibexa Commerce in latest version with _no_ demo content or demo website.
+Full installation documentation is [in the online docs](https://doc.ibexa.co/en/latest/getting_started/install_ez_platform/#get-ibexa-platform).
 
 - composer install
 - bash install-solr.sh 8983
