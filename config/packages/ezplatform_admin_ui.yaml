@@ -26,7 +26,7 @@ ezplatform:
                 media: /1/43/
             assets:
                 icon_sets:
-                    streamlineicons: /bundles/ezplatformadminuiassets/vendors/webalys/streamlineicons/all-icons.svg
+                    streamlineicons: /bundles/ibexaplatformicons/img/icons/all-icons.svg
                 default_icon_set: streamlineicons
 
 jms_translation:
