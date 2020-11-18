@@ -59,6 +59,7 @@ return [
     EzSystems\EzPlatformVersionComparisonBundle\EzPlatformVersionComparisonBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Search\IbexaPlatformSearchBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Assets\IbexaPlatformAssetsBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Icons\IbexaPlatformIconsBundle::class => ['all' => true],
     FOS\CommentBundle\FOSCommentBundle::class => ['all' => true],
     Tedivm\StashBundle\TedivmStashBundle::class => ['all' => true],
     WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle::class => ['all' => true],
