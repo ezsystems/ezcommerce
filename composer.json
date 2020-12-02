@@ -4,6 +4,7 @@
     "homepage": "https://github.com/ezsystems/ezcommerce",
     "license": "proprietary",
     "type": "project",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "eZ dev-team & eZ Community",
@@ -26,6 +27,7 @@
         "ezsystems/ez-support-tools": "^2.2@dev",
         "ezsystems/ezcommerce-admin-ui": "^1.1@dev",
         "ezsystems/ezcommerce-base-design": "^3.2@dev",
+        "ezsystems/ezcommerce-checkout": "dev-EZEE-3338-checkout",
         "ezsystems/ezcommerce-erp-admin": "^3.2@dev",
         "ezsystems/ezcommerce-fieldtypes": "^1.1@dev",
         "ezsystems/ezcommerce-order-history": "^3.2@dev",

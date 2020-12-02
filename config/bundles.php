@@ -70,7 +70,6 @@ return [
     Silversolutions\Bundle\ToolsBundle\SilversolutionsToolsBundle::class => ['all' => true],
     Silversolutions\Bundle\TranslationBundle\SilversolutionsTranslationBundle::class => ['all' => true],
     Siso\Bundle\EzStudioBundle\SisoEzStudioBundle::class => ['all' => true],
-    Siso\Bundle\CheckoutBundle\SisoCheckoutBundle::class => ['all' => true],
     Siso\Bundle\ComparisonBundle\SisoComparisonBundle::class => ['all' => true],
     Siso\Bundle\PaymentBundle\SisoPaymentBundle::class => ['all' => true],
     Kaliop\eZMigrationBundle\eZMigrationBundle::class => ['all' => true],
@@ -106,4 +105,5 @@ return [
     Ibexa\Platform\Bundle\Segmentation\IbexaPlatformSegmentationBundle::class => ['all' => true],
     JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
     EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Commerce\Checkout\IbexaPlatformCommerceCheckoutBundle::class => ['all' => true],
 ];
