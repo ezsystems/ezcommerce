@@ -107,4 +107,6 @@ return [
     Ibexa\Platform\Bundle\Segmentation\IbexaPlatformSegmentationBundle::class => ['all' => true],
     JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
     EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle::class => ['all' => true],
+    EzSystems\EzRecommendationClientBundle\EzRecommendationClientBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Personalization\IbexaPlatformPersonalizationBundle::class => ['all' => true],
 ];
