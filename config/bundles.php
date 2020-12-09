@@ -109,4 +109,5 @@ return [
     EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle::class => ['all' => true],
     EzSystems\EzRecommendationClientBundle\EzRecommendationClientBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Personalization\IbexaPlatformPersonalizationBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\Migration\IbexaPlatformMigrationBundle::class => ['all' => true],
 ];
