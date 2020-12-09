@@ -110,4 +110,5 @@ return [
     EzSystems\EzRecommendationClientBundle\EzRecommendationClientBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Personalization\IbexaPlatformPersonalizationBundle::class => ['all' => true],
     Ibexa\Platform\Bundle\Migration\IbexaPlatformMigrationBundle::class => ['all' => true],
+    Ibexa\Platform\Bundle\ImageEditor\IbexaPlatformImageEditorBundle::class => ['all' => true],
 ];
