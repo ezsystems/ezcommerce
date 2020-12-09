@@ -28,6 +28,7 @@
         "ezsystems/ez-support-tools": "^2.2@dev",
         "ezsystems/ezcommerce-admin-ui": "^1.1@dev",
         "ezsystems/ezcommerce-base-design": "^3.2@dev",
+        "ezsystems/ezcommerce-checkout": "^1.0@dev",
         "ezsystems/ezcommerce-erp-admin": "^3.2@dev",
         "ezsystems/ezcommerce-fieldtypes": "^1.1@dev",
         "ezsystems/ezcommerce-order-history": "^3.2@dev",

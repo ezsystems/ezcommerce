@@ -13,7 +13,7 @@ silversolutions_translation:
     prefix: /
 
 siso_checkout:
-    resource: '@SisoCheckoutBundle/Resources/config/routing.yml'
+    resource: '@IbexaPlatformCommerceCheckoutBundle/Resources/config/routing.yaml'
     prefix: /
 siso_comparison:
     resource: '@SisoComparisonBundle/Resources/config/routing.yml'
