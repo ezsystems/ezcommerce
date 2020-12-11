@@ -120,9 +120,32 @@ if (isset($relationships['solr'])) {
         }
 
         $container->setParameter('search_engine', 'solr');
-        $container->setParameter('solr_dsn', sprintf('http://%s:%d/%s', $endpoint['host'], $endpoint['port'], 'solr'));
+        $container->setParameter('solr_dsn', sprintf('http://%s:%d', $endpoint['host'], $endpoint['port']));
         // To set solr_core parameter we assume path is in form like: "solr/collection1"
         $container->setParameter('solr_core', substr($endpoint['path'], 5));
+
+        $container->setParameter('siso_search.solr.host', $endpoint['host']);
+        $container->setParameter('siso_search.solr.port', $endpoint['port']);
+        $container->setParameter('siso_search.solr.core', $endpoint['rel']);
+    }
+}
+
+if (isset($relationships['elasticsearch'])) {
+    foreach ($relationships['elasticsearch'] as $endpoint) {
+        $dsn = sprintf('%s:%d', $endpoint['host'], $endpoint['port']);
+
+        if ($endpoint['username'] !== null && $endpoint['password'] !== null) {
+            $dsn = $endpoint['username'] . ':' . $endpoint['password'] . '@' . $dsn;
+        }
+
+        if ($endpoint['path'] !== null) {
+            $dsn .= '/' . $endpoint['path'];
+        }
+
+        $dsn = $endpoint['scheme'] . '://' . $dsn;
+
+        $container->setParameter('search_engine', 'elasticsearch');
+        $container->setParameter('elasticsearch_dsn', $dsn);
     }
 }
 
