@@ -104,6 +104,9 @@ mounts:
     'config/graphql/types/ezplatform':
         source: local
         source_path: graphql_types
+    'src/Migrations/Ibexa':
+        source: local
+        source_path: MigrationsIbexa
 # Uncomment if you need to use Kaliop Migrations on your setup and not able to get it to write to "var" dir.
 #    'src/AppBundle/MigrationVersions/References':
 #        source: local
