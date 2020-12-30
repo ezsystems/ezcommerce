@@ -90,6 +90,7 @@ return [
     Siso\AdminErpPluginBundle\SisoAdminErpPluginBundle::class => ['all' => true],
     Siso\Bundle\InstallerBundle\SisoInstallerBundle::class => ['all' => true],
     Siso\Bundle\ShopFrontendBundle\SisoShopFrontendBundle::class => ['all' => true],
+    Siso\Bundle\BasketBundle\SisoBasketBundle::class => ['all' => true],
     FOS\RestBundle\FOSRestBundle::class => ['all' => true],
     Overblog\GraphQLBundle\OverblogGraphQLBundle::class => ['all' => true],
     Overblog\GraphiQLBundle\OverblogGraphiQLBundle::class => ['dev' => true],
