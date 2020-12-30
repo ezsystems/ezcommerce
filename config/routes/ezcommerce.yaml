@@ -37,6 +37,10 @@ siso_tools:
 siso_orderhistory:
     resource: '@SisoOrderHistoryBundle/Resources/config/routing.yml'
     prefix: /
+siso_local_order_management:
+    resource: '@SisoLocalOrderManagementBundle/Resources/config/routing.yml'
+    prefix: '%ezpublish_rest.path_prefix%'
+
 
 silver_eshop_admin_rest_api:
     resource: '@IbexaPlatformCommerceAdminUiBundle/Resources/config/routing_rest.yml'
