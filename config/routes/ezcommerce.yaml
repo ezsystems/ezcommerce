@@ -48,3 +48,6 @@ silver_eshop_admin_rest_api:
 
 ezcommerce_admin_ui:
     resource: '@IbexaPlatformCommerceAdminUiBundle/Resources/config/routing.yaml'
+
+siso_basket:
+    resource: '@SisoBasketBundle/Resources/config/routing.yaml'
