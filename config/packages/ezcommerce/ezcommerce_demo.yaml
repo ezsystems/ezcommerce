@@ -84,11 +84,11 @@ parameters:
         variant_color:
             filter_type: 'multi_or'
             sort_type: 'alpha'
-            index_field: 'ses_variant_farbe_ms'
+            index_field: 'ses_variant_color_ms'
         variant_size:
             filter_type: 'multi_or'
             sort_type: 'alpha'
-            index_field: 'ses_variant_groesse_ms'
+            index_field: 'ses_variant_size_ms'
         category:
             filter_type: 'multi_or'
             sort_type: 'alpha'
