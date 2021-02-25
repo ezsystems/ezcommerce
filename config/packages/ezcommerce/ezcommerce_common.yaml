@@ -27,7 +27,7 @@ twig:
     strict_variables: '%kernel.debug%'
     form_themes:
         - 'bootstrap_4_layout.html.twig'
-        - '@SilversolutionsEshop/Forms/form_div_layout.html.twig'
+        - '@ezdesign/Forms/form_div_layout.html.twig'
 
 jms_payment_core:
     encryption:
