@@ -3,6 +3,11 @@
 [![Latest release](https://img.shields.io/github/release/ezsystems/ezcommerce.svg?style=flat-square)](https://github.com/ezsystems/ezplatform-ee/releases)
 [![License](https://img.shields.io/packagist/l/ezsystems/ezcommerce.svg?style=flat-square)](LICENSE)
 
+## **This repository is no longer in active development!**
+
+The `master` branch of this repository is no longer in development.
+Please refer to [ibexa/commerce](https://github.com/ibexa/commerce) for the current, Flex-based repository.
+
 ## What is Ibexa Commerce?
 *Ibexa Commerce* is commercial Digital Experience Platform (DXP) software developed by Ibexa.
 
