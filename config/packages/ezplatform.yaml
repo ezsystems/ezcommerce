@@ -98,9 +98,6 @@ ezplatform:
         site:
             languages: [eng-GB]
 
-        site_group:
-            design: base_design
-
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
