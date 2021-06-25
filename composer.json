@@ -67,7 +67,7 @@
         "gregwar/captcha-bundle": "^2.0",
         "incenteev/composer-parameter-handler": "^2.1.3",
         "jms/payment-core-bundle": "~1.3",
-        "kaliop/ezmigrationbundle": "^4.7",
+        "kaliop/ezmigrationbundle": "^5",
         "knplabs/knp-menu-bundle": "^2.2.1",
         "monolog/monolog": "^1.25.2",
         "oneup/flysystem-bundle": "^3.0.2",
